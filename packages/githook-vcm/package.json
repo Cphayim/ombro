@@ -1,20 +1,31 @@
 {
+  "name": "@naughty/githook-vcm",
+  "version": "0.1.2",
+  "bin": {
+    "githook-vcm": "bin/githook-vcm"
+  },
+  "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
-  "name": "@naughty/githook-vcm",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": "bin/githook-vcm",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/naughty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/naughty/issues"
+  },
+  "homepage": "https://github.com/Cphayim/naughty#readme",
   "keywords": [],
-  "author": "Cphayim<admin@cphayim.me>",
+  "author": "Cphayim",
   "license": "ISC",
   "dependencies": {
     "chalk": "^2.4.1",
     "husky": "^1.0.0-rc.7"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }

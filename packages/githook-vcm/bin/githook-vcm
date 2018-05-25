@@ -7,14 +7,15 @@ const chalk = require('chalk')
 // =================================================
 const msgPath = path.join(process.cwd(), process.env.HUSKY_GIT_PARAMS || '.git/COMMIT_EDITMSG')
 const msg = fs.readFileSync(msgPath, 'utf-8').trim()
-const commitRE = /^(revert: )?(feat|fix|docs|style|refactor|perf|opt|test|workflow|ci|chore|types)(\(.+\)): .{1,50}/
+const commitRE = /^(revert: )?(feat|fix|docs|style|refactor|perf|opt|test|workflow|ci|release|chore|types)(\(.+\)): .{1,50}/
 
-if (!commitRE.test(msg)) {
+if (!/^Merge branch/.test(msg) && !commitRE.test(msg)) {
   console.log()
   console.error(
     `${chalk.bgRed.white(' ERROR ')} ${chalk.red(`invalid commit message format.`)}\n\n` +
       chalk.red(`  Proper commit message format is required for automated changelog generation. \n`) +
-      `    <type>(<scope>): <subject> \n\n` +
+      `    <type>(<scope>): <subject> \n` +
+      `    type: feat|fix|docs|style|refactor|perf|opt|test|workflow|ci|release|chore|types \n\n`+
       `  Examples:\n` +
       `    ${chalk.green(`feat(compiler): add 'comments' option`)}\n` +
       `    ${chalk.green(`fix(v-model): handle events on blur (close #28)`)}\n\n` +

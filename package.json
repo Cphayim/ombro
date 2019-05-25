@@ -10,12 +10,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "husky": "^1.0.0-rc.8"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "node ./packages/@naughty/githook-vcm/lib/vcm"
-    }
-  }
+  "devDependencies": {}
 }

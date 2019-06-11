@@ -1,0 +1,41 @@
+{
+  "name": "@naughty/cy-node",
+  "version": "1.0.2",
+  "author": "Cphayim",
+  "license": "MIT",
+  "bin": {
+    "cy-node": "bin/cy-node"
+  },
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "test": "exit 0;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/naughty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/naughty/issues"
+  },
+  "homepage": "https://github.com/Cphayim/naughty/tree/master/packages/runtime/cy-node#readme",
+  "keywords": [],
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "yargs": "^13.2.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.4.5",
+    "@types/node": "^12.0.2",
+    "@types/yargs": "^13.0.0",
+    "typescript": "^3.4.5"
+  },
+  "description": ""
+}

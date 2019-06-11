@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/Cphayim/naughty/issues"
   },
-  "homepage": "https://github.com/Cphayim/naughty#readme",
+  "homepage": "https://github.com/Cphayim/naughty/tree/master/packages/githooks/githook-vcm#readme",
   "keywords": [],
   "dependencies": {
     "chalk": "^2.4.1",

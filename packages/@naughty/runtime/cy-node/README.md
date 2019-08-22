@@ -14,7 +14,9 @@ $ npm install -g @naughty/cy-node
 
 **命令**
 ```sh
-cy-node [--entry]
+$ cy-node xxx.js
+
+$ cy-node --entry=./src/app.js
 ```
 
 **参数**

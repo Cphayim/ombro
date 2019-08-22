@@ -10,4 +10,4 @@ exports.BABEL_CONFIG = utils_1.getBabelConfig({
     userRoot: exports.USER_ROOT,
     defaultConfig: DEFAULT_BABEL_CONFIG
 });
-exports.ENTRY = yargs_1.argv.entry || './src';
+exports.ENTRY = yargs_1.argv._[0] || yargs_1.argv.entry || './src';

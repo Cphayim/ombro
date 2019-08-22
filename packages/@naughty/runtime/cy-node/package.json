@@ -1,6 +1,6 @@
 {
   "name": "@naughty/cy-node",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "🚀一个快速启动 ESNext 运行时",
   "author": "Cphayim",
   "license": "MIT",
@@ -28,7 +28,10 @@
   "dependencies": {
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
     "@babel/preset-env": "^7.4.5",
     "chalk": "^2.4.1",
     "yargs": "^13.2.4"

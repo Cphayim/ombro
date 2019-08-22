@@ -20,6 +20,6 @@ function getBabelConfig({ userRoot, defaultConfig }) {
 }
 exports.getBabelConfig = getBabelConfig;
 function log(msg) {
-    process.stdout.write(chalk_1.default.bgBlue(chalk_1.default.black(` ${msg} \n`)));
+    process.stdout.write(chalk_1.default.green('[cy-node] ' + msg + '\n'));
 }
 exports.log = log;

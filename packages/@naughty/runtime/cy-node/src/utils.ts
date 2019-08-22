@@ -1,7 +1,7 @@
 /*
  * @Author: Cphayim
  * @Date: 2019-06-11 10:13:03
- * @LastEditTime: 2019-06-11 10:35:29
+ * @LastEditTime: 2019-08-22 13:07:49
  * @Description: 工具函数
  */
 
@@ -17,13 +17,7 @@ import chalk from 'chalk'
  * @param {string} options.defaultConfig 默认的 babel 配置文件
  * @return
  */
-export function getBabelConfig({
-  userRoot,
-  defaultConfig
-}: {
-  userRoot: string
-  defaultConfig: string
-}) {
+export function getBabelConfig({ userRoot, defaultConfig }: { userRoot: string; defaultConfig: string }) {
   const validNames = ['babel.config.js', '.babelrc']
   let file = ''
   for (let name of validNames) {
@@ -37,5 +31,5 @@ export function getBabelConfig({
 }
 
 export function log(msg: string) {
-  process.stdout.write(chalk.bgBlue(chalk.black(` ${msg} \n`)))
+  process.stdout.write(chalk.green('[cy-node] ' + msg + '\n'))
 }

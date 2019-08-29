@@ -1,6 +1,6 @@
 {
   "name": "@naughty/cy-node",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "🚀一个快速启动 ESNext 运行时",
   "author": "Cphayim",
   "license": "MIT",

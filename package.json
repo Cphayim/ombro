@@ -1,20 +1,37 @@
 {
-  "private": true,
   "name": "naughty",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/naughty.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@naughty/githook-vcm": "^1.2.2",
-    "yorkie": "^2.0.0"
+  "bugs": {
+    "url": "https://github.com/Cphayim/naughty/issues"
+  },
+  "homepage": "https://github.com/Cphayim/naughty#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "git add .",
+    "commit": "git-cz"
   },
   "gitHooks": {
-    "commit-msg": "githook-vcm --ignore-scope"
+    "commit-msg": "commitlint -e --config commitlint.config.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@naughty/cy-node": "^1.0.10",
+    "commitizen": "^4.0.4",
+    "cz-conventional-changelog": "^3.1.0",
+    "yorkie": "^2.0.0"
   }
 }

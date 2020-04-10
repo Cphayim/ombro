@@ -1,7 +1,7 @@
 /*
  * @Author: Cphayim
  * @Date: 2019-06-11 09:43:30
- * @LastEditTime: 2019-08-29 10:27:12
+ * @LastEditTime: 2019-09-24 16:04:18
  * @Description: 环境监测
  */
 import { join } from 'path'
@@ -16,9 +16,11 @@ export const USER_ROOT = process.cwd()
 const DEFAULT_BABEL_CONFIG = join(CUR_ROOT, 'babel.config.js')
 
 // 导出使用的 babel config 文件
-export const BABEL_CONFIG = getBabelConfig({
-  userRoot: USER_ROOT,
-  defaultConfig: DEFAULT_BABEL_CONFIG
-})
+// export const BABEL_CONFIG = getBabelConfig({
+//   userRoot: USER_ROOT,
+//   defaultConfig: DEFAULT_BABEL_CONFIG
+// })
+
+export const BABEL_CONFIG = DEFAULT_BABEL_CONFIG
 
 export const ENTRY = (argv._[0] as string | undefined) || (argv.entry as string | undefined) || './src'

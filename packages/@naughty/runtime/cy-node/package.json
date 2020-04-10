@@ -1,6 +1,6 @@
 {
   "name": "@naughty/cy-node",
-  "version": "1.0.8",
+  "version": "1.0.12",
   "description": "🚀一个快速启动 ESNext 运行时",
   "author": "Cphayim",
   "license": "MIT",
@@ -14,7 +14,8 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "test": "exit 0;"
+    "test": "exit 0;",
+    "prepublishOnly": "echo 正在发布;"
   },
   "repository": {
     "type": "git",

@@ -7,5 +7,6 @@ export default class Engine {
     private moduleRoot;
     constructor(userRoot: string, moduleRoot: string);
     bootstrap({ entry, babelConfig }: BootStrapOptions): void;
+    getBabelBinFIle(): string;
 }
 export {};

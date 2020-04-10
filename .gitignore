@@ -3,7 +3,11 @@ node_modules
 design
 *.log
 packages/test
-dist
+
 temp
 tmp
 .vuerc
+
+# build
+dist
+lib

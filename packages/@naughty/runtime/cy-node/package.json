@@ -14,7 +14,6 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "test": "exit 0;",
     "prepublishOnly": "echo 正在发布;"
   },
   "repository": {

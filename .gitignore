@@ -1,12 +1,14 @@
+# common
 node_modules
 .DS_Store
-design
-*.log
-packages/test
 
+# log
+*.log
+
+# test
+test
 temp
 tmp
-.vuerc
 
 # build
 dist

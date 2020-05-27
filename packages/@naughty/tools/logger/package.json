@@ -1,0 +1,32 @@
+{
+  "name": "@naughty/logger",
+  "version": "1.0.1",
+  "description": "命令行标准输出打印 logger",
+  "author": "Cphayim",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "prepublishOnly": "echo 正在发布;"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/naughty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/naughty/issues"
+  },
+  "homepage": "https://github.com/Cphayim/naughty/tree/master/packages/runtime/cy-node#readme",
+  "keywords": [],
+  "dependencies": {
+    "chalk": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.2",
+    "typescript": "^3.4.5"
+  }
+}

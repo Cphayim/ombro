@@ -1,6 +1,2 @@
-/**
- * @type {import('@commitlint/core').Config}
- */
-const config = { extends: ['@commitlint/config-conventional'] }
-
-module.exports = config
+/* eslint-disable */
+module.exports = { extends: ['@commitlint/config-conventional'] }

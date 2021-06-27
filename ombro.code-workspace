@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "✨ ombro",
+			"path": "."
+		},
+		{
+			"name": "📦 @ombro/cy-node",
+			"path": "packages/cy-node"
+		}
+	],
+	"settings": {}
+}

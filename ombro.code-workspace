@@ -5,12 +5,12 @@
 			"path": "."
 		},
 		{
-			"name": "📦 @ombro/cy-node",
-			"path": "packages/cy-node"
-		},
-		{
 			"name": "📦 @ombro/logger",
 			"path": "packages/logger"
+		},
+		{
+			"name": "📦 @ombro/node",
+			"path": "packages/node"
 		}
 	],
 	"settings": {}

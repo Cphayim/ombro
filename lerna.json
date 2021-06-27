@@ -3,6 +3,10 @@
   "packages": ["packages/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "command": {},
+  "command": {
+    "version": {
+      "message": "chore(release): publish %s"
+    }
+  },
   "ignoreChanges": ["**/*.md"]
 }

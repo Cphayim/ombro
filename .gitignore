@@ -1,15 +1,14 @@
-# common
-node_modules
 .DS_Store
 
-# log
-*.log
+node_modules/
 
-# test
-test
-temp
-tmp
+# builded directory
+lib/
+tmp/
 
-# build
-dist
-lib
+yarn-error.log
+lerna-debug.log
+pkg-updater.json
+
+tsconfig.tsbuildinfo
+yarn

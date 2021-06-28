@@ -1,7 +1,0 @@
-.DS_Store
-.gitignore
-
-tmp
-test
-src
-tsconfig.json

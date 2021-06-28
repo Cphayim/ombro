@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "✨ ombro",
+			"path": "."
+		},
+		{
+			"name": "📦 @ombro/logger",
+			"path": "packages/logger"
+		},
+		{
+			"name": "📦 @ombro/node",
+			"path": "packages/node"
+		}
+	],
+	"settings": {}
+}

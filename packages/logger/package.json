@@ -22,8 +22,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "prepublish": "npm run build"
+    "clean": "rimraf lib coverage tsconfig.tsbuildinfo",
+    "prepublish": "npm run clean && npm run build"
   },
   "bugs": {
     "url": "https://github.com/Cphayim/ombro/issues"

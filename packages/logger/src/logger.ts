@@ -5,6 +5,8 @@
  */
 import readline from 'readline'
 import chalk from 'chalk'
+import ora from 'ora'
+import stripAnsi from 'strip-ansi'
 
 type LevelKey = 'verbose' | 'info' | 'notice' | 'warn' | 'error' | 'silent'
 type LevelValue = number
@@ -21,11 +23,11 @@ export const levelMap: Record<LevelKey, LevelValue> = {
 const DEFAULT_LEVEL: LevelKey = 'info'
 
 let levelValue: LevelValue
-setLevelValue(DEFAULT_LEVEL)
+setLevel(DEFAULT_LEVEL)
 
 const chalkTag = (msg: string) => (!msg ? '' : chalk.bgBlackBright.white.dim(` ${msg} `))
 
-export function setLevelValue(level: LevelKey): void {
+export function setLevel(level: LevelKey): void {
   levelValue = normalizeLevelValue(level)
 }
 
@@ -36,8 +38,9 @@ function normalizeLevelValue(level: LevelKey) {
 function format(label: string, msg: string) {
   return msg
     .split('\n')
-    .map((line) => {
-      return `${label} ${line}`
+    .map((line, i) => {
+      // return `${label} ${line}`
+      return i === 0 ? `${label} ${line}` : line.padStart(stripAnsi(label).length + line.length + 1)
     })
     .join('\n')
 }
@@ -54,7 +57,7 @@ export function verbose(message: string, tag = ''): void {
 }
 
 export function debug(message: string, tag = ''): void {
-  const label = chalk.bgYellow.black(' DEBUG ') + chalkTag(tag)
+  const label = chalk.bgCyan.black(' DEBUG ') + chalkTag(tag)
   log('verbose', format(label, message))
 }
 
@@ -63,19 +66,35 @@ export function info(message: string, tag = ''): void {
   log('info', format(label, message))
 }
 
-export function done(message: string, tag = ''): void {
+export function done(message: string, tag = '', plain = false): void {
   const label = chalk.bgGreen.black(' DONE ') + chalkTag(tag)
+  message = plain ? message : chalk.green(message)
   log('notice', format(label, message))
 }
 
-export function warn(message: string, tag = ''): void {
+export function warn(message: string, tag = '', plain = false): void {
   const label = chalk.bgYellow.black(' WARN ') + chalkTag(tag)
-  log('warn', format(label, chalk.yellow(message)))
+  message = plain ? message : chalk.yellow(message)
+  log('warn', format(label, message))
 }
 
-export function error(message: string, tag = ''): void {
+export function error(message: string, tag = '', plain = false): void {
   const label = chalk.bgRed.black(' ERR ') + chalkTag(tag)
-  log('error', format(label, chalk.red(message)))
+  message = plain ? message : chalk.red(message)
+  log('error', format(label, message))
+}
+
+let spinner: ora.Ora | null = null
+export function loadding(options: string | ora.Options): ora.Ora {
+  clearLoadding()
+  spinner = ora(options).start()
+  return spinner
+}
+
+export function clearLoadding(): void {
+  if (spinner) {
+    spinner.stop()
+  }
 }
 
 export function clearConsole(title = ''): void {

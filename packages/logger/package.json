@@ -33,7 +33,8 @@
     "@types/figlet": "^1.5.1",
     "@types/node": "^15.12.4",
     "@types/npmlog": "^4.1.2",
-    "typescript": "^4.3.4"
+    "typescript": "^4.3.4",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
     "chalk": "^4.1.1",

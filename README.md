@@ -6,9 +6,9 @@
 
 ## Packages
 
-- runtime
+- **runtime**
   - [@ombro/node](./packages/node): A zero-configuration, quick-start ESNext Node.js runtime
-- utils
+- **utils**
   - [@ombro/logger](./packages/logger): Provides preset and custom Node.js log output tools
 
 ## License

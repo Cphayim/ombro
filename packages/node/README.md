@@ -1,6 +1,6 @@
 # @ombro/node
 
-[简体中文]('./README.zh-CN.md)
+[简体中文](./README.zh-CN.md)
 
 🚀 A zero-configuration, quick-start `ESNext` Node.js runtime
 

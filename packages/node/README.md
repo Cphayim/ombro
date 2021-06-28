@@ -1,25 +1,30 @@
-# @naughty/cy-node
+# @ombro/node
 
-🚀 一个快速启动 `ESNext` 运行时
+[简体中文]('./README.zh-CN.md)
 
-## 如何使用？
+🚀 A zero-configuration, quick-start `ESNext` Node.js runtime
 
-安装
+## Install
 
 ```sh
-# 安装在项目中
+# install in the current project
 $ npm install -D @ombro/node
-# 安装在全局
+
+# install in the global
 $ npm install -g @ombro/node
 ```
 
-**命令**
+## Usage
+
+You can use `@ombro/node` like Node.js
 
 ```sh
-$ onode xxx.js
+$ onode index.js
 ```
 
-## 更新日志
+Before execution, `@ombro/node` will use `babel` to compile the file, you don’t need to configure it separately
+
+## Change Log
 
 - v1.0.0
-  - 从原包 `@naughty/cy-node` 迁移
+  - Migrate from the original package `@naughty/cy-node`

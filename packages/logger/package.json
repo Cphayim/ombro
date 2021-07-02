@@ -1,7 +1,7 @@
 {
   "name": "@ombro/logger",
   "version": "1.1.0",
-  "description": "log tools",
+  "description": "Provides preset and custom Node.js log output tools",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
   "license": "MIT",

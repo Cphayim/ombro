@@ -1,7 +1,7 @@
 {
   "name": "@ombro/node",
   "version": "1.0.0",
-  "description": "🚀一个快速启动 ESNext 运行时",
+  "description": "🚀 A zero-configuration, quick-start `ESNext` Node.js runtime",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
   "license": "MIT",

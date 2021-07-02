@@ -1,6 +1,6 @@
 {
   "name": "@ombro/node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🚀 A zero-configuration, quick-start `ESNext` Node.js runtime",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",

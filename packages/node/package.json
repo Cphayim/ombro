@@ -1,6 +1,6 @@
 {
   "name": "@ombro/node",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🚀 A zero-configuration, quick-start `ESNext` Node.js runtime",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
@@ -45,7 +45,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
     "@babel/preset-env": "^7.4.5",
-    "@ombro/logger": "^1.1.0",
+    "@ombro/logger": "^1.1.1",
     "minimist": "^1.2.5"
   }
 }

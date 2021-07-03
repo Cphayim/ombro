@@ -22,7 +22,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cphayim/ombro.git"
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/node"
   },
   "scripts": {
     "dev": "tsc -w",

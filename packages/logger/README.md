@@ -148,17 +148,17 @@ Print a error message
   - type: `boolean`
   - default: `false`
 
-### `logger.loadding(options: string | ora.Options): ora.Ora`
+### `logger.startLoading(options: string | ora.Options): ora.Ora`
 
-Display wait spinner, only one spinner can exist at the same time
+Display wait loading spinner, only one spinner can exist at the same time
 
 - **options**
   - message or options
   - type: `string | ora.Options`
 
-### `logger.clearLoadding()`
+### `logger.stopLoading()`
 
-Stop and clear spinner
+Stop and clear loading spinner
 
 ### `logger.clearConsole(title = '')`
 

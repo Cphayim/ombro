@@ -8,7 +8,19 @@ import chalk from 'chalk'
 import ora from 'ora'
 import stripAnsi from 'strip-ansi'
 
-type LevelKey = 'verbose' | 'info' | 'notice' | 'warn' | 'error' | 'silent'
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace NodeJS {
+    export interface ProcessEnv {
+      /**
+       * 日志等级
+       */
+      LOGGER_LEVEL: 'verbose' | 'info' | 'notice' | 'warn' | 'error' | 'silent'
+    }
+  }
+}
+
+type LevelKey = typeof process.env.LOGGER_LEVEL
 type LevelValue = number
 
 export const levelMap: Record<LevelKey, LevelValue> = {
@@ -23,7 +35,7 @@ export const levelMap: Record<LevelKey, LevelValue> = {
 const DEFAULT_LEVEL: LevelKey = 'info'
 
 let levelValue: LevelValue
-setLevel(DEFAULT_LEVEL)
+setLevel(process.env.LOGGER_LEVEL)
 
 const chalkTag = (msg: string) => (!msg ? '' : chalk.bgBlackBright.white.dim(` ${msg} `))
 
@@ -32,7 +44,7 @@ export function setLevel(level: LevelKey): void {
 }
 
 function normalizeLevelValue(level: LevelKey) {
-  return levelMap[level] ? levelMap[level] : levelMap['info']
+  return levelMap[level] ? levelMap[level] : levelMap[DEFAULT_LEVEL]
 }
 
 function format(label: string, msg: string) {
@@ -85,16 +97,14 @@ export function error(message: string, tag = '', plain = false): void {
 }
 
 let spinner: ora.Ora | null = null
-export function loadding(options: string | ora.Options): ora.Ora {
-  clearLoadding()
+export function startLoading(options: string | ora.Options): ora.Ora {
+  stopLoading()
   spinner = ora(options).start()
   return spinner
 }
 
-export function clearLoadding(): void {
-  if (spinner) {
-    spinner.stop()
-  }
+export function stopLoading(): void {
+  if (spinner) spinner.stop()
 }
 
 export function clearConsole(title = ''): void {

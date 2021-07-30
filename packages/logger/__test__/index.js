@@ -11,9 +11,22 @@ logger.done('success message')
 logger.warn('warning message')
 logger.error('error message')
 
-logger.startLoading('wait a moment')
+const obj = {
+  name: 'Cphayim',
+  age: 18,
+}
+
+logger.done(obj)
+
+// logger.startLoading('wait a moment')
+// setTimeout(() => {
+//   logger.stopLoading()
+//   logger.done('successful!')
+//   console.log('\n')
+// }, 2000)
+
+const spinner = logger.createSpinner('正在加载')
+
 setTimeout(() => {
-  logger.stopLoading()
-  logger.done('successful!')
-  console.log('\n')
-}, 2000)
+  spinner.done('加载成功')
+}, 1000)

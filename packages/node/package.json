@@ -46,7 +46,7 @@
     "@babel/plugin-proposal-optional-chaining": "^7.2.0",
     "@babel/plugin-proposal-pipeline-operator": "^7.5.0",
     "@babel/preset-env": "^7.4.5",
-    "@ombro/logger": "^1.1.2",
+    "@ombro/logger": "^1.4.0",
     "minimist": "^1.2.5"
   }
 }

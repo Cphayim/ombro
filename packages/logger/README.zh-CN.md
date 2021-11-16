@@ -146,15 +146,15 @@ setTimeout(() => {
   - 类型: `boolean`
   - 默认值: `false`
 
-### `logger.loadding(options: string | ora.Options): ora.Ora`
+### `logger.startLoading(message: string): void`
 
 显示旋转等待消息，只能同时存在一个
 
-- **options**
-  - message or options
-  - 类型: `string | ora.Options`
+- **message**
+  - 等待消息
+  - 类型: `string`
 
-### `logger.clearLoadding()`
+### `logger.stopLoading()`
 
 停止并清除等待消息
 

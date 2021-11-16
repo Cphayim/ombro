@@ -18,15 +18,10 @@ const obj = {
 
 logger.done(obj)
 
-// logger.startLoading('wait a moment')
-// setTimeout(() => {
-//   logger.stopLoading()
-//   logger.done('successful!')
-//   console.log('\n')
-// }, 2000)
-
-const spinner = logger.createSpinner('正在加载')
-
+logger.startLoading('正在下载')
 setTimeout(() => {
-  spinner.done('加载成功')
-}, 1000)
+  logger.done('插入')
+  setTimeout(() => {
+    logger.stopLoading()
+  }, 2000)
+}, 2000)

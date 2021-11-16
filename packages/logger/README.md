@@ -148,13 +148,13 @@ Print a error message
   - type: `boolean`
   - default: `false`
 
-### `logger.startLoading(options: string | ora.Options): ora.Ora`
+### `logger.startLoading(message: string): void`
 
 Display wait loading spinner, only one spinner can exist at the same time
 
-- **options**
-  - message or options
-  - type: `string | ora.Options`
+- **message**
+  - wait message
+  - type: `string`
 
 ### `logger.stopLoading()`
 

@@ -85,22 +85,22 @@ export function error(message: unknown, tag = '', plain = false): void {
 }
 
 export function log(message: unknown, level: LevelKey = 'info'): void {
-  // 防止干扰，输出其它 log 时停用全局的 loading
-  stopLoading()
+  globalSpinner?.stop()
   // 低于 levelValue 级别的日志将不会打印
   if (normalizeLevelValue(level) < levelValue) return
   console.log(message)
+  globalSpinner?.start()
 }
 
 // 全局 loading
-let loading: ora.Ora | null = null
-export function startLoading(options: string | ora.Options): ora.Ora {
-  stopLoading()
-  loading = ora(options).start()
-  return loading
+let globalSpinner: Spinner | null = null
+export function startLoading(message: string): void {
+  globalSpinner?.stop()
+  globalSpinner = new Spinner(message)
 }
 export function stopLoading(): void {
-  if (loading) loading.stop()
+  globalSpinner?.stop()
+  globalSpinner = null
 }
 
 export function clearConsole(title = ''): void {
@@ -118,27 +118,33 @@ export function createSpinner(message: string): Spinner {
 }
 
 class Spinner {
-  private s: Ora
-  private state: 'pending' | 'done' | 'fail'
+  private ora: Ora
+  private message: string
+
   constructor(message: string) {
-    this.s = ora().start(message)
-    this.state = 'pending'
-  }
-  done(message: string) {
-    if (this.state !== 'pending') return
-    this.stop()
-    this.state = 'done'
-    if (message) log(chalk.green(`✔ ${message}`))
+    this.message = message
+    this.ora = ora()
+    this.start(message)
   }
 
-  fail(message: string) {
-    if (this.state !== 'pending') return
-    this.stop()
-    this.state = 'fail'
-    if (message) log(chalk.red(`✘ ${message}`))
+  start(message?: string) {
+    if (!message) message = this.message
+    this.ora.start(message)
   }
 
   stop() {
-    this.s.stop()
+    this.ora.stop()
+  }
+
+  success(message?: string) {
+    this.ora.succeed(chalk.green(message))
+  }
+
+  warn(message?: string) {
+    this.ora.warn(chalk.yellow(message))
+  }
+
+  fail(message?: string) {
+    this.ora.fail(chalk.red(message))
   }
 }

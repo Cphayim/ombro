@@ -1,13 +1,21 @@
 {
-	"folders": [
-		{
-			"name": "✨ ombro",
-			"path": "."
-		},
-		{
-			"name": "📦 @ombro/logger",
-			"path": "packages/logger"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "name": "✨ ombro",
+      "path": "."
+    },
+    {
+      "name": "📦 @ombro/logger",
+      "path": "packages/logger"
+    },
+    {
+      "name": "📦 @ombro/node",
+      "path": "packages/node"
+    },
+    {
+      "name": "📦 @ombro/ts-config",
+      "path": "packages/tsconfig"
+    }
+  ],
+  "settings": {}
 }

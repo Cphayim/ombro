@@ -1,0 +1,27 @@
+{
+  "name": "@ombro/ts-config",
+  "version": "1.0.0",
+  "description": "Shared TypeScript",
+  "engines": {
+    "node": ">=12"
+  },
+  "keywords": [
+    "tsconfig",
+    "typescript"
+  ],
+  "author": "Cphayim <i@cphayim.me>",
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "license": "MIT",
+  "main": "tsconfig.json",
+  "files": [
+    "tsconfig.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/tsconfig"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  }
+}

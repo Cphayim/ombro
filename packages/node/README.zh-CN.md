@@ -1,5 +1,9 @@
 # @ombro/node
 
+![npm package](https://badgen.net/npm/v/@ombro/node)
+
+[English](./README.md)
+
 🚀 一个快速启动的 `ESNext` Node.js 运行时
 
 ## 安装
@@ -21,7 +25,10 @@ $ onode index.js
 
 在执行之前，`@ombro/node` 将使用 `babel` 对文件进行编译，你无需为此进行单独配置
 
-## 更新日志
+## CHANGELOG
 
-- v1.0.0
-  - 从原包 `@naughty/cy-node` 迁移
+[CHANGELOG.md](./CHANGELOG.md)
+
+## LICENSE
+
+MIT

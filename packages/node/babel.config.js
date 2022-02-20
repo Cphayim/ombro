@@ -10,10 +10,8 @@ module.exports = {
     ],
   ],
   plugins: [
-    ['@babel/plugin-proposal-decorators', { legacy: true }],
-    ['@babel/plugin-proposal-class-properties', { loose: true }],
-    '@babel/plugin-proposal-optional-chaining',
-    ['@babel/plugin-proposal-pipeline-operator', { proposal: 'smart' }],
+    ['@babel/plugin-proposal-decorators', { version: '2018-09', decoratorsBeforeExport: true }],
+    ['@babel/plugin-proposal-pipeline-operator', { proposal: 'hack', topicToken: '%' }],
   ],
   sourceMaps: 'inline',
   retainLines: true,

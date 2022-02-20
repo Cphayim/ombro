@@ -1,5 +1,7 @@
 # @ombro/node
 
+![npm package](https://badgen.net/npm/v/@ombro/node)
+
 [简体中文](./README.zh-CN.md)
 
 🚀 A zero-configuration, quick-start `ESNext` Node.js runtime
@@ -24,7 +26,10 @@ $ onode index.js
 
 Before execution, `@ombro/node` will use `babel` to compile the file, you don’t need to configure it separately
 
-## Change Log
+## CHANGELOG
 
-- v1.0.0
-  - Migrate from the original package `@naughty/cy-node`
+[CHANGELOG.md](./CHANGELOG.md)
+
+## LICENSE
+
+MIT

@@ -11,4 +11,4 @@ import Engine from './engine'
 const argv = minimist(process.argv.slice(2))
 
 const engine = new Engine()
-engine.bootstrap({ entry: argv._[0] ?? './src', babelConfig: BABEL_CONFIG })
+engine.bootstrap({ entry: argv._[0], babelConfig: BABEL_CONFIG })

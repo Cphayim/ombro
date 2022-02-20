@@ -1,5 +1,7 @@
 # @ombro/logger
 
+![npm package](https://badgen.net/npm/v/@ombro/logger)
+
 [简体中文](./README.zh-CN.md)
 
 Provides preset and custom Node.js log output tools

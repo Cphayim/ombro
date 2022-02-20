@@ -1,5 +1,9 @@
 # @ombro/logger
 
+![npm package](https://badgen.net/npm/v/@ombro/logger)
+
+[English](./README.md)
+
 提供预设和自定义的 Node.js 日志输出工具
 
 ![](./docs/console.png)

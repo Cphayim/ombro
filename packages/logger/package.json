@@ -26,7 +26,7 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "test": "node __test__/index.js",
+    "test": "node test/index.js >/dev/null 2>&1",
     "clean": "rimraf dist coverage *.tsbuildinfo",
     "prepublish": "npm run clean && npm run build"
   },

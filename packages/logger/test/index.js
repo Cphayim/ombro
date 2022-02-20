@@ -1,4 +1,4 @@
-const { logger } = require('../lib')
+const { logger } = require('../dist')
 
 console.log('\n')
 
@@ -23,5 +23,5 @@ setTimeout(() => {
   logger.done('插入')
   setTimeout(() => {
     logger.stopLoading()
-  }, 2000)
-}, 2000)
+  }, 1000)
+}, 1000)

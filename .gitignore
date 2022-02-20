@@ -4,6 +4,7 @@ node_modules/
 
 # builded directory
 lib/
+dist/
 tmp/
 
 yarn-error.log

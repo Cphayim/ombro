@@ -1,11 +1,22 @@
-# `tsconfig`
+# @ombro/tsconfig
 
-> TODO: description
+> Shared TypeScript [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) for projects
+
+## Install
+
+```sh
+npm install --save-dev @ombro/ts-config
+```
 
 ## Usage
 
-```
-const tsconfig = require('tsconfig');
+Add `extends` to your project `tsconfig.json`
 
-// TODO: DEMONSTRATE API
+```json
+{
+  "extends": "@ombro/ts-config/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}
 ```

@@ -12,6 +12,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
+    "clean": "pnpm -r clean",
+    "build": "pnpm -r build",
     "test": "pnpm -r test",
     "lint": "eslint packages/*/src/**.ts",
     "format": "prettier --write --parser typescript \"packages/**/*.ts\"",

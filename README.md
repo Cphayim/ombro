@@ -1,8 +1,6 @@
-# ombro
+<img src="./docs/assets/logo.png" style="zoom:50%;" alt="ombro - a customized toolbox for js" />
 
-📦 A customized toolbox for Node.js🔧🔨🔩💡
-
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-f49033.svg)](https://pnpm.io/)
 
 ## Packages
 

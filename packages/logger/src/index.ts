@@ -3,9 +3,10 @@
  * @Date: 2020-07-17 21:52:39
  * @Description: 日志工具
  */
-export * as logger from './logger'
+import figlet from 'figlet'
+import colors from 'chalk'
+import dedent from 'dedent'
+import boxen from 'boxen'
 
-export { default as figlet } from 'figlet'
-export { default as colors } from 'chalk'
-export { default as dedent } from 'dedent'
-export { default as boxen } from 'boxen'
+export { figlet, colors, dedent, boxen }
+export * as logger from './logger'

@@ -170,3 +170,11 @@ setTimeout(() => {
   - 可选文本，清理后输出
   - 类型: `string`
   - 默认值: `''`
+
+## CHANGELOG
+
+[CHANGELOG.md](./CHANGELOG.md)
+
+## LICENSE
+
+MIT

@@ -1,5 +1,17 @@
 # @ombro/node
 
+## 1.2.0
+
+### Minor Changes
+
+#### Performances:
+
+- Optimized package size, remove some dependencies
+
+#### Refactors:
+
+- Refactor the find up for babel binary and config
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,48 +1,65 @@
 /*
  * @Author: Cphayim
  * @Date: 2019-06-11 09:44:20
- * @LastEditTime: 2022-02-21 02:38:47
- * @Description: 引擎
+ * @Description:
  */
+import path from 'path'
 import fs from 'fs'
-import { join } from 'path'
 import execa from 'execa'
-
-import { logger } from '@ombro/logger'
-
-import { MODULE_ROOT, CWD_ROOT } from './envs'
+import findUp from 'find-up'
+import { log } from './utils'
 
 type BootstrapOptions = {
   entry: string
-  babelConfig: string
 }
 
-export default class Engine {
-  /**
-   * 启动
-   */
-  bootstrap({ entry, babelConfig }: BootstrapOptions): void {
-    this.check(entry)
-    logger.info(`waiting for compile exec: ${entry}`)
-    const babelBinFile = this.getBabelBinFile()
-    execa.commandSync(`${babelBinFile} --config-file ${babelConfig} ${entry}`, {
+export class Engine {
+  boot({ entry }: BootstrapOptions): void {
+    this.checkEntryExists(entry)
+
+    const babelBinary = this.findBabelBinary()
+    const babelConfig = this.findBabelConfig()
+
+    log(`waiting for compile exec: ${entry}`)
+    execa.commandSync(`${babelBinary} --config-file ${babelConfig} ${entry}`, {
       stdio: 'inherit',
       cwd: process.cwd(),
     })
   }
 
-  getBabelBinFile(): string {
-    // 如果当前模块目录下存在 babel-node 执行文件（全局安装的 @ombro/node 执行场景）使用模块内置的依赖
-    // 如果当前模块目录下不存在 babel-node 执行文件（局部安装的 @ombro/node 模块执行场景）使用项目内置的依赖
-    const local = join(MODULE_ROOT, 'node_modules', '.bin', 'babel-node')
-    const outer = join(CWD_ROOT, 'node_modules', '.bin', 'babel-node')
-    return fs.existsSync(local) ? local : outer
+  findBabelBinary(): string | undefined {
+    return findUp.sync(
+      (dir) => {
+        const file = path.join(dir, 'node_modules', '.bin', 'babel-node')
+        return findUp.sync.exists(file) ? file : dir
+      },
+      { cwd: __dirname },
+    )
   }
 
-  check(entry: string): void {
+  findBabelConfig(): string | undefined {
+    return findUp.sync(
+      [
+        'babel.config.js',
+        'babel.config.cjs',
+        'babel.config.mjs',
+        'babel.config.json',
+        '.babelrc',
+        '.babelrc.js',
+        '.babelrc.cjs',
+        '.babelrc.mjs',
+      ],
+      {
+        cwd: __dirname,
+      },
+    )
+  }
+
+  checkEntryExists(entry: string): void {
     if (!fs.existsSync(entry)) {
-      logger.error(`entry file ${entry} not exists`)
-      process.exit(1)
+      throw new Error(`entry file ${entry} not exists`)
     }
   }
 }
+
+export const createEngine = () => new Engine()

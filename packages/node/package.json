@@ -1,13 +1,13 @@
 {
   "name": "@ombro/node",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "🚀 A zero-configuration, quick-start `ESNext` Node.js runtime",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
   "license": "MIT",
   "bin": {
-    "ombro-node": "bin/ombro-node.js",
-    "onode": "bin/ombro-node.js"
+    "ombro-node": "dist/index.js",
+    "onode": "dist/index.js"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,9 +26,8 @@
   "scripts": {
     "dev": "tsc -w",
     "build": "tsc",
-    "test": "jest",
     "clean": "rimraf dist coverage *.tsbuildinfo",
-    "prepublish": "pnpm run clean && pnpm run build && pnpm run test"
+    "prepublish": "pnpm run clean && pnpm run build"
   },
   "bugs": {
     "url": "https://github.com/Cphayim/ombro/issues"
@@ -39,8 +38,8 @@
     "@babel/plugin-proposal-decorators": "^7.17.2",
     "@babel/plugin-proposal-pipeline-operator": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
-    "@ombro/logger": "workspace:*",
     "execa": "^5.1.1",
+    "find-up": "^4.1.0",
     "minimist": "^1.2.5"
   }
 }

@@ -1,14 +1,28 @@
+#!/usr/bin/env node
 /*
  * @Author: Cphayim
  * @Date: 2019-06-11 09:13:09
- * @Description: 入口
+ * @Description:
  */
-import minimist from 'minimist'
+import path from 'path'
+import { createEngine, Engine } from './engine'
+import { log } from './utils'
 
-import { BABEL_CONFIG } from './envs'
-import Engine from './engine'
+// Outside API call
+export { createEngine, Engine }
 
-const argv = minimist(process.argv.slice(2))
+// Command line call
+if (require.main === module) {
+  const entry = process.argv[2]
+  if (!entry || entry === '-h' || entry === '--help') {
+    printHelp()
+  } else {
+    createEngine().boot({ entry })
+  }
+}
 
-const engine = new Engine()
-engine.bootstrap({ entry: argv._[0], babelConfig: BABEL_CONFIG })
+function printHelp() {
+  const pkg = require(path.resolve(__dirname, '..', 'package.json'))
+  log(`${pkg.name} v${pkg.version}\n`)
+  log(`Usage: onode index.js`)
+}

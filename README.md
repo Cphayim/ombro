@@ -1,8 +1,13 @@
 <div align="center">
+
 <img src="./docs/assets/logo.png" width="500" alt="ombro - a customized toolbox for js" />
+
+![GitHub Actions Status](https://github.com/Cphayim/ombro/actions/workflows/ci.yml/badge.svg)[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)![GitHub language](https://img.shields.io/github/languages/top/Cphayim/ombro.svg)[![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-f49033.svg)](https://pnpm.io/)
+
 </div>
 
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/) [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-f49033.svg)](https://pnpm.io/)
+
+
 
 ## Packages
 

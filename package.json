@@ -16,6 +16,7 @@
     "clean:build": "pnpm -r exec -- rimraf dist coverage *.tsbuildinfo",
     "build": "pnpm -r build",
     "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "eslint packages/*/src/**.ts",
     "format": "prettier --write --parser typescript \"packages/**/*.ts\"",
     "commit": "git add . && cz"

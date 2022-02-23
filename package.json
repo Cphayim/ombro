@@ -12,9 +12,10 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
-    "clean": "pnpm -r clean",
+    "clean:deps": "pnpm -wr exec -- rimraf node_modules",
+    "clean:build": "pnpm -r exec -- rimraf dist coverage *.tsbuildinfo",
     "build": "pnpm -r build",
-    "test": "pnpm -r test",
+    "test": "jest",
     "lint": "eslint packages/*/src/**.ts",
     "format": "prettier --write --parser typescript \"packages/**/*.ts\"",
     "commit": "git add . && cz"
@@ -50,7 +51,7 @@
     "esno": "^0.14.1",
     "execa": "^6.1.0",
     "husky": "^6.0.0",
-    "jest": "~27.4.7",
+    "jest": "^27.5.1",
     "lint-staged": "^11.2.6",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",

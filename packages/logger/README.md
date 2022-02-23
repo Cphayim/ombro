@@ -170,3 +170,11 @@ Clear the output of the current console，Only valid under tty (macOS, Linux)
   - Optionally output text after cleanup
   - type: `string`
   - default: `''`
+
+## CHANGELOG
+
+[CHANGELOG.md](./CHANGELOG.md)
+
+## LICENSE
+
+MIT

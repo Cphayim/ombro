@@ -1,12 +1,16 @@
-name: CI
+name: build and test
 
 on:
   push:
     branches:
       - '**'
+    paths:
+      - 'packages/**'
   pull_request:
     branches:
       - main
+    paths:
+      - 'packages/**'
 
 jobs:
   test:
@@ -32,8 +36,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
+      - name: Run ESLint
+        run: pnpm lint
+
+      - name: Run compile and build packages
         run: pnpm build
 
-      - name: Test
-        run: pnpm test
+      - name: Run tests and collect coverage
+        run: pnpm test:coverage
+
+      - name: Upload coverage reports
+        uses: codecov/codecov-action@v2

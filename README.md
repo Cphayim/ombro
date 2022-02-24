@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="./">
+<a href="https://github.com/Cphayim/ombro">
 <img src="./docs/assets/logo.png" width="500" alt="ombro - a customized toolbox for js" />
 </a>
 

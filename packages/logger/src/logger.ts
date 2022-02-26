@@ -34,11 +34,11 @@ export const levelMap: Record<LevelKey, LevelValue> = {
 
 const DEFAULT_LEVEL: LevelKey = 'info'
 
-let levelValue: LevelValue
+let currentLevelValue: LevelValue
 setLevel(process.env.LOGGER_LEVEL)
 
 export function setLevel(level: LevelKey): void {
-  levelValue = normalizeLevelValue(level)
+  currentLevelValue = normalizeLevelValue(level)
 }
 
 function normalizeLevelValue(level: LevelKey) {
@@ -47,39 +47,39 @@ function normalizeLevelValue(level: LevelKey) {
 
 export function verbose(message: unknown, tag = ''): void {
   message = inspect(message)
-  const label = chalk.bgWhite.black(Label.verbose) + chalkTag(tag)
+  const label = chalk.bgWhite.bold.black(Label.verbose) + chalkTag(tag)
   log(format(label, message), 'verbose')
 }
 
 export function debug(message: unknown, tag = ''): void {
   message = inspect(message)
-  const label = chalk.bgMagenta.black(Label.debug) + chalkTag(tag)
+  const label = chalk.bgMagenta.bold.black(Label.debug) + chalkTag(tag)
   log(format(label, message), 'verbose')
 }
 
 export function info(message: unknown, tag = ''): void {
   message = inspect(message)
-  const label = chalk.bgBlue.black(Label.info) + chalkTag(tag)
+  const label = chalk.bgBlue.bold.black(Label.info) + chalkTag(tag)
   log(format(label, message), 'info')
 }
 
 export function done(message: unknown, tag = '', plain = false): void {
   message = inspect(message)
-  const label = chalk.bgGreen.black(Label.done) + chalkTag(tag)
+  const label = chalk.bgGreen.bold.black(Label.done) + chalkTag(tag)
   message = plain ? message : chalk.green(message)
   log(format(label, message), 'notice')
 }
 
 export function warn(message: unknown, tag = '', plain = false): void {
   message = inspect(message)
-  const label = chalk.bgYellow.black(Label.warn) + chalkTag(tag)
+  const label = chalk.bgYellow.bold.black(Label.warn) + chalkTag(tag)
   message = plain ? message : chalk.yellow(message)
   log(format(label, message), 'warn')
 }
 
 export function error(message: unknown, tag = '', plain = false): void {
   message = inspect(message)
-  const label = chalk.bgRed.black(Label.error) + chalkTag(tag)
+  const label = chalk.bgRed.bold.black(Label.error) + chalkTag(tag)
   message = plain ? message : chalk.red(message)
   log(format(label, message), 'error')
 }
@@ -87,7 +87,7 @@ export function error(message: unknown, tag = '', plain = false): void {
 export function log(message: unknown, level: LevelKey = 'info'): void {
   globalSpinner?.stop()
   // 低于 levelValue 级别的日志将不会打印
-  if (normalizeLevelValue(level) < levelValue) return
+  if (normalizeLevelValue(level) < currentLevelValue) return
   console.log(message)
   globalSpinner?.start()
 }
@@ -117,6 +117,7 @@ export function createSpinner(message: string): Spinner {
   return new Spinner(message)
 }
 
+// When Logger_LEVEL is silent, spinner will not be displayed either
 class Spinner {
   private ora: Ora
   private message: string
@@ -129,7 +130,7 @@ class Spinner {
 
   start(message?: string) {
     if (!message) message = this.message
-    this.ora.start(message)
+    this.isNotSilent() && this.ora.start(message)
   }
 
   stop() {
@@ -137,14 +138,18 @@ class Spinner {
   }
 
   success(message?: string) {
-    this.ora.succeed(chalk.green(message))
+    this.isNotSilent() && this.ora.succeed(chalk.green(message))
   }
 
   warn(message?: string) {
-    this.ora.warn(chalk.yellow(message))
+    this.isNotSilent() && this.ora.warn(chalk.yellow(message))
   }
 
   fail(message?: string) {
-    this.ora.fail(chalk.red(message))
+    this.isNotSilent() && this.ora.fail(chalk.red(message))
+  }
+
+  private isNotSilent(): boolean {
+    return currentLevelValue !== levelMap.silent
   }
 }

@@ -1,5 +1,11 @@
 # @ombro/logger
 
+## 1.5.4
+
+### Patch Changes
+
+Logger_LEVEL is silent, spinner will not be displayed either
+
 ## 1.5.3
 
 ### Patch Changes

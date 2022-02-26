@@ -158,6 +158,7 @@ describe('@ombro/logger -> logger.ts -> spinner', () => {
   })
 
   afterEach(() => {
+    logger.setLevel('info')
     fns.forEach((fn) => fn.mockReset())
   })
 
@@ -172,6 +173,14 @@ describe('@ombro/logger -> logger.ts -> spinner', () => {
     expect(stop).toBeCalled()
   })
 
+  it('When Logger_LEVEL is silent, spinner will not be displayed either', () => {
+    logger.setLevel('silent')
+    logger.startLoading('title')
+    expect(start).not.toBeCalled()
+    logger.stopLoading()
+    expect(stop).toBeCalled()
+  })
+
   it('Global spinner start and stop, replace previous', () => {
     logger.startLoading('title')
     logger.startLoading('title2')
@@ -181,6 +190,17 @@ describe('@ombro/logger -> logger.ts -> spinner', () => {
     expect(stop).toBeCalledTimes(2)
     logger.stopLoading()
     expect(stop).toBeCalledTimes(2)
+  })
+
+  it('Global spinner will be restored after other logs', () => {
+    const logSpy = jest.spyOn(console, 'log').mockImplementationOnce(() => void 0)
+    logger.startLoading('title')
+    expect(start).toBeCalledTimes(1)
+    logger.info('info')
+    expect(logSpy).toBeCalledTimes(1)
+    logSpy.mockRestore()
+    expect(stop).toBeCalledTimes(1)
+    expect(start).toBeCalledTimes(2)
   })
 
   it('Single spinner start and stop', () => {

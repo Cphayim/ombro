@@ -4,7 +4,7 @@
 
 ### Patch Changes
 
-- Fix label Fixed issue where bolder black label is actually grey
+Fixed bug where bold labels appear grey
 
 ## 1.5.4
 

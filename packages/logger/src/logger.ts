@@ -9,7 +9,7 @@ import chalk from 'chalk'
 import ora, { Ora } from 'ora'
 
 import './type'
-import { chalkTag, format, inspect } from './utils'
+import { blackBold, chalkTag, format, inspect } from './utils'
 
 type LevelKey = typeof process.env.LOGGER_LEVEL
 type LevelValue = number
@@ -47,39 +47,39 @@ function normalizeLevelValue(level: LevelKey) {
 
 export function verbose(message: unknown, tag = ''): void {
   message = inspect(message)
-  const label = chalk.bgWhite.bold.black(Label.verbose) + chalkTag(tag)
+  const label = blackBold(chalk.bgWhite)(Label.verbose) + chalkTag(tag)
   log(format(label, message), 'verbose')
 }
 
 export function debug(message: unknown, tag = ''): void {
   message = inspect(message)
-  const label = chalk.bgMagenta.bold.black(Label.debug) + chalkTag(tag)
+  const label = blackBold(chalk.bgMagenta)(Label.debug) + chalkTag(tag)
   log(format(label, message), 'verbose')
 }
 
 export function info(message: unknown, tag = ''): void {
   message = inspect(message)
-  const label = chalk.bgBlue.bold.black(Label.info) + chalkTag(tag)
+  const label = blackBold(chalk.bgBlue)(Label.info) + chalkTag(tag)
   log(format(label, message), 'info')
 }
 
 export function done(message: unknown, tag = '', plain = false): void {
   message = inspect(message)
-  const label = chalk.bgGreen.bold.black(Label.done) + chalkTag(tag)
+  const label = blackBold(chalk.bgGreen)(Label.done) + chalkTag(tag)
   message = plain ? message : chalk.green(message)
   log(format(label, message), 'notice')
 }
 
 export function warn(message: unknown, tag = '', plain = false): void {
   message = inspect(message)
-  const label = chalk.bgYellow.bold.black(Label.warn) + chalkTag(tag)
+  const label = blackBold(chalk.bgYellow)(Label.warn) + chalkTag(tag)
   message = plain ? message : chalk.yellow(message)
   log(format(label, message), 'warn')
 }
 
 export function error(message: unknown, tag = '', plain = false): void {
   message = inspect(message)
-  const label = chalk.bgRed.bold.black(Label.error) + chalkTag(tag)
+  const label = blackBold(chalk.bgRed)(Label.error) + chalkTag(tag)
   message = plain ? message : chalk.red(message)
   log(format(label, message), 'error')
 }

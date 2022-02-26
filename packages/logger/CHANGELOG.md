@@ -1,5 +1,11 @@
 # @ombro/logger
 
+## 1.5.5
+
+### Patch Changes
+
+- Fix label Fixed issue where bolder black label is actually grey
+
 ## 1.5.4
 
 ### Patch Changes

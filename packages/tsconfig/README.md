@@ -12,9 +12,23 @@ npm install --save-dev @ombro/ts-config
 
 Add `extends` to your project `tsconfig.json`
 
+**Use ESM**
+
 ```json
 {
+  // Equivalent to @ombro/ts-config/tsconfig.esm.json
   "extends": "@ombro/ts-config/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}
+```
+
+**Use Commonjs**
+
+```json
+{
+  "extends": "@ombro/ts-config/tsconfig.cjs.json",
   "compilerOptions": {
     "outDir": "dist"
   }

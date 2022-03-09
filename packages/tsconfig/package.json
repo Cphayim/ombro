@@ -1,6 +1,6 @@
 {
   "name": "@ombro/ts-config",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Shared TypeScript",
   "engines": {
     "node": ">=12"
@@ -14,7 +14,7 @@
   "license": "MIT",
   "main": "tsconfig.json",
   "files": [
-    "tsconfig.json"
+    "tsconfig*.json"
   ],
   "repository": {
     "type": "git",

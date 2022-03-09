@@ -1,10 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "target": "ES2017",
-    "module": "Commonjs",
-    "outDir": "dist",
-    "esModuleInterop": true
+    "outDir": "dist"
   },
   "include": ["src/**/*"],
   "exclude": ["**/__tests__/**"]

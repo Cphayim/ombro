@@ -1,0 +1,29 @@
+{
+  "name": "@ombro/package",
+  "version": "0.0.1",
+  "description": "ombro package description",
+  "author": "Cphayim <i@cphayim.me>",
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/package"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "clean": "rimraf dist coverage *.tsbuildinfo",
+    "prepublish": "pnpm run clean && pnpm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "@ombro/eslint-config-vue2-typescript",
+  "version": "0.1.0",
+  "description": "Shared eslint config for Vue2 + TypeScript",
+  "author": "Cphayim <i@cphayim.me>",
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/eslint-config-vue2-typescript"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  },
+  "peerDependencies": {
+    "eslint": "^6.2.0 || ^7.0.0 || ^8.0.0",
+    "prettier": "^2.0.0",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-vue": "^8.5.0"
+  }
+}

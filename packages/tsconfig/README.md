@@ -16,7 +16,6 @@ Add `extends` to your project `tsconfig.json`
 
 ```json
 {
-  // Equivalent to @ombro/ts-config/tsconfig.esm.json
   "extends": "@ombro/ts-config/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist"

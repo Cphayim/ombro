@@ -19,9 +19,10 @@
 - **Browser utils**
 - **Runtime**
   - [@ombro/node](./packages/node): A zero-configuration, quick-start ESNext Node.js runtime
-- **Lint/Formatter**
-  - ESLint + Prettier
+- **Preset config**
+  - TypeScript
     - [@ombro/ts-config](./packages/tsconfig): `tsconfig.json` preset config for Typescript
+  - ESLint + Prettier
     - [@ombro/eslint-config](./packages/eslint-config): `eslint + prettier` preset config for JavaScript
     - [@ombro/eslint-config-typescript](./packages/eslint-config-typescript): `eslint + prettier` preset config for TypeScript
     - [@ombro/eslint-config-vue3](./packages/eslint-config-vue3): `eslint + prettier` preset config for Vue3

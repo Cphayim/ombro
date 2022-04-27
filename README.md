@@ -17,17 +17,21 @@
 - **Node.js utils**
   - [@ombro/logger](./packages/logger): Provides preset and custom Node.js log output tools
 - **Browser utils**
-- **Runtime or Builder**
+- **Runtime**
   - [@ombro/node](./packages/node): A zero-configuration, quick-start ESNext Node.js runtime
-  - [@ombro/ts-config](./packages/tsconfig): Out-of-the-box tsconfig.json preset for Typescript
-  - [@ombro/eslint-config](./packages/eslint-config): Out-of-the-box eslint-config for JavaScript
-  - [@ombro/eslint-config-typescript](./packages/eslint-config-typescript): Out-of-the-box eslint-config for TypeScript
-  - [@ombro/eslint-config-vue3](./packages/eslint-config-vue3): Out-of-the-box eslint-config for Vue3
-  - [@ombro/eslint-config-vue3-typescript](./packages/eslint-config-vue3-typescript): Out-of-the-box eslint-config for Vue3 + TypeScript
-  - [@ombro/eslint-config-vue2](./packages/eslint-config-vue2): Out-of-the-box eslint-config for Vue2
-  - [@ombro/eslint-config-vue2-typescript](./packages/eslint-config-vue2-typescript): Out-of-the-box eslint-config for Vue2 + TypeScript
-  - [@ombro/eslint-config-react](./packages/eslint-config-react): Out-of-the-box eslint-config for React
-  - [@ombro/eslint-config-react-typescript](./packages/eslint-config-react-typescript): Out-of-the-box eslint-config for React + TypeScript
+- **Lint/Formatter**
+  - ESLint + Prettier
+    - [@ombro/ts-config](./packages/tsconfig): `tsconfig.json` preset config for Typescript
+    - [@ombro/eslint-config](./packages/eslint-config): `eslint + prettier` preset config for JavaScript
+    - [@ombro/eslint-config-typescript](./packages/eslint-config-typescript): `eslint + prettier` preset config for TypeScript
+    - [@ombro/eslint-config-vue3](./packages/eslint-config-vue3): `eslint + prettier` preset config for Vue3
+    - [@ombro/eslint-config-vue3-typescript](./packages/eslint-config-vue3-typescript): `eslint + prettier` preset config for Vue3
+    - [@ombro/eslint-config-vue2](./packages/eslint-config-vue2): `eslint + prettier` preset config for Vue2
+    - [@ombro/eslint-config-vue2-typescript](./packages/eslint-config-vue2-typescript): `eslint + prettier` preset config for Vue2
+    - [@ombro/eslint-config-react](./packages/eslint-config-react): `eslint + prettier` preset config for React
+    - [@ombro/eslint-config-react-typescript](./packages/eslint-config-react-typescript): `eslint + prettier` preset config for for React
+  - StyleLint + Prettier
+    - [@ombro/stylelint-config](./packages/stylelint-config): `stylelint + prettier` preset config for CSS/SCSS
 
 ## License
 

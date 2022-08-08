@@ -1,6 +1,6 @@
 {
   "name": "@ombro/ts-config",
-  "version": "1.4.0",
+  "version": "1.4.2",
   "description": "Shared TypeScript tsconfig.json",
   "engines": {
     "node": ">=12"

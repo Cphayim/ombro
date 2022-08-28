@@ -8,4 +8,10 @@
   ignorePaths: ['**/__tests__/**'],
   ignoreDeps: ['typescript'],
   timezone: 'Asia/Shanghai',
+  packageRules: [
+    {
+      depTypeList: ['peerDependencies'],
+      enabled: false,
+    },
+  ],
 }

@@ -3,7 +3,7 @@ name: build and test
 on:
   push:
     branches:
-      - '**'
+      - main
     paths:
       - 'packages/**'
   pull_request:

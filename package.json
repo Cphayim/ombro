@@ -5,8 +5,7 @@
   "repository": "git@github.com:Cphayim/ombro.git",
   "license": "MIT",
   "engines": {
-    "node": "^14.13.1 || >=16.0.0",
-    "pnpm": ">=7.0.0"
+    "node": "^14.13.1 || >=16.0.0"
   },
   "packageManager": "pnpm@7.9.0",
   "scripts": {

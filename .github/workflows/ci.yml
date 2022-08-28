@@ -15,11 +15,11 @@ jobs:
         node-version: [14, 16, 18]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 7.9.0
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2

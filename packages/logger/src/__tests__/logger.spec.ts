@@ -1,3 +1,4 @@
+import { describe, beforeAll, afterEach, afterAll, it, vi, expect } from 'vitest'
 import readline from 'readline'
 
 describe('@ombro/logger -> logger.ts -> log', () => {
@@ -11,17 +12,17 @@ describe('@ombro/logger -> logger.ts -> log', () => {
   let logger: typeof import('../logger')
 
   beforeAll(async () => {
-    jest.spyOn(console, 'log').mockImplementation(() => void 0)
+    vi.spyOn(console, 'log').mockImplementation(() => void 0)
     logger = await import('../logger')
   })
 
   afterEach(() => {
-    jest.resetAllMocks()
+    vi.resetAllMocks()
   })
 
   afterAll(() => {
-    jest.restoreAllMocks()
-    jest.resetModules()
+    vi.restoreAllMocks()
+    vi.resetModules()
   })
 
   it('Have 6 log functions', () => {
@@ -95,20 +96,20 @@ describe('@ombro/logger -> logger.ts -> clearConsole', () => {
   const isTTY = process.stdout.isTTY
 
   beforeAll(async () => {
-    jest.spyOn(console, 'log').mockImplementation(() => void 0)
-    jest.spyOn(readline, 'cursorTo')
-    jest.spyOn(readline, 'clearScreenDown')
+    vi.spyOn(console, 'log').mockImplementation(() => void 0)
+    vi.spyOn(readline, 'cursorTo')
+    vi.spyOn(readline, 'clearScreenDown')
     logger = await import('../logger')
   })
 
   afterEach(() => {
-    jest.resetAllMocks()
+    vi.resetAllMocks()
     process.stdout.isTTY = isTTY
   })
 
   afterAll(() => {
-    jest.restoreAllMocks()
-    jest.resetModules()
+    vi.restoreAllMocks()
+    vi.resetModules()
   })
 
   it('Have clearConsole function', () => {
@@ -143,92 +144,94 @@ describe('@ombro/logger -> logger.ts -> clearConsole', () => {
 
 describe('@ombro/logger -> logger.ts -> spinner', () => {
   let logger: typeof import('../logger')
-  const start = jest.fn()
-  const stop = jest.fn()
-  const succeed = jest.fn()
-  const warn = jest.fn()
-  const fail = jest.fn()
-  const fns = [start, stop, succeed, warn, fail]
+  let ora: any
 
-  jest.mock('ora', () => {
-    return () => ({ start, stop, succeed, warn, fail })
+  vi.mock('ora', () => {
+    const start = vi.fn()
+    const stop = vi.fn()
+    const succeed = vi.fn()
+    const warn = vi.fn()
+    const fail = vi.fn()
+    return { default: () => ({ start, stop, succeed, warn, fail }) }
   })
+
   beforeAll(async () => {
     logger = await import('../logger')
+    ora = (await import('ora')).default()
   })
 
   afterEach(() => {
     logger.setLevel('info')
-    fns.forEach((fn) => fn.mockReset())
+    vi.resetAllMocks()
   })
 
   afterAll(() => {
-    fns.forEach((fn) => fn.mockRestore())
+    vi.restoreAllMocks()
   })
 
   it('Global spinner start and stop', () => {
     logger.startLoading('title')
-    expect(start).toBeCalled()
+    expect(ora.start).toBeCalled()
     logger.stopLoading()
-    expect(stop).toBeCalled()
+    expect(ora.stop).toBeCalled()
   })
 
   it('When Logger_LEVEL is silent, spinner will not be displayed either', () => {
     logger.setLevel('silent')
     logger.startLoading('title')
-    expect(start).not.toBeCalled()
+    expect(ora.start).not.toBeCalled()
     logger.stopLoading()
-    expect(stop).toBeCalled()
+    expect(ora.stop).toBeCalled()
   })
 
   it('Global spinner start and stop, replace previous', () => {
     logger.startLoading('title')
     logger.startLoading('title2')
-    expect(stop).toBeCalledTimes(1)
-    expect(start).toBeCalledTimes(2)
+    expect(ora.stop).toBeCalledTimes(1)
+    expect(ora.start).toBeCalledTimes(2)
     logger.stopLoading()
-    expect(stop).toBeCalledTimes(2)
+    expect(ora.stop).toBeCalledTimes(2)
     logger.stopLoading()
-    expect(stop).toBeCalledTimes(2)
+    expect(ora.stop).toBeCalledTimes(2)
   })
 
   it('Global spinner will be restored after other logs', () => {
-    const logSpy = jest.spyOn(console, 'log').mockImplementationOnce(() => void 0)
+    const logSpy = vi.spyOn(console, 'log').mockImplementationOnce(() => void 0)
     logger.startLoading('title')
-    expect(start).toBeCalledTimes(1)
+    expect(ora.start).toBeCalledTimes(1)
     logger.info('info')
     expect(logSpy).toBeCalledTimes(1)
     logSpy.mockRestore()
-    expect(stop).toBeCalledTimes(1)
-    expect(start).toBeCalledTimes(2)
+    expect(ora.stop).toBeCalledTimes(1)
+    expect(ora.start).toBeCalledTimes(2)
   })
 
   it('Single spinner start and stop', () => {
     const spinner = logger.createSpinner('title')
-    expect(start).toBeCalledTimes(1)
+    expect(ora.start).toBeCalledTimes(1)
     spinner.stop()
-    expect(stop).toBeCalledTimes(1)
+    expect(ora.stop).toBeCalledTimes(1)
     spinner.start()
-    expect(start).toBeCalledTimes(2)
+    expect(ora.start).toBeCalledTimes(2)
     spinner.stop()
-    expect(stop).toBeCalledTimes(2)
+    expect(ora.stop).toBeCalledTimes(2)
   })
 
   it('Single spinner start and success', () => {
     const spinner = logger.createSpinner('title')
     spinner.success('success')
-    expect(succeed).toBeCalledTimes(1)
+    expect(ora.succeed).toBeCalledTimes(1)
   })
 
   it('Single spinner start and warn', () => {
     const spinner = logger.createSpinner('title')
-    spinner.warn('warnning')
-    expect(warn).toBeCalledTimes(1)
+    spinner.warn('warning')
+    expect(ora.warn).toBeCalledTimes(1)
   })
 
   it('Single spinner start and fail', () => {
     const spinner = logger.createSpinner('title')
     spinner.fail('fail')
-    expect(fail).toBeCalledTimes(1)
+    expect(ora.fail).toBeCalledTimes(1)
   })
 })

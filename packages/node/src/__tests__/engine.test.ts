@@ -1,12 +1,13 @@
 import path from 'path'
+import { describe, beforeAll, afterAll, it, expect, vi } from 'vitest'
 
-describe('@ombro/node', () => {
+describe.skip('@ombro/node', () => {
   beforeAll(() => {
-    jest.spyOn(console, 'log').mockImplementation(() => void 0)
+    vi.spyOn(console, 'log').mockImplementation(() => void 0)
   })
 
   afterAll(() => {
-    jest.restoreAllMocks()
+    vi.restoreAllMocks()
   })
 
   it('Correct entry file, able to compile and execute', async () => {

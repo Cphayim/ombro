@@ -6,9 +6,9 @@
   "license": "MIT",
   "engines": {
     "node": "^14.13.1 || >=16.0.0",
-    "pnpm": "^7.0.0"
+    "pnpm": ">=7.0.0"
   },
-  "packageManager": "pnpm@7.0.0",
+  "packageManager": "pnpm@7.9.5",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",

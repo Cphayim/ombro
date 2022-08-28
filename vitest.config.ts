@@ -11,7 +11,7 @@ export default defineConfig({
     ],
     coverage: {
       include: ['packages/**/src/**/*.ts'],
-      reporter: ['text', 'lcov'],
+      reporter: ['text', 'json'],
       statements: 90,
     },
   },

@@ -21,7 +21,7 @@
   - [@ombro/node](./packages/node): A zero-configuration, quick-start ESNext Node.js runtime
 - **Preset config**
   - TypeScript
-    - [@ombro/ts-config](./packages/tsconfig): `tsconfig.json` preset config for Typescript
+    - [@ombro/tsconfig](./packages/tsconfig): `tsconfig.json` preset config for Typescript
   - ESLint + Prettier
     - [@ombro/eslint-config](./packages/eslint-config): `eslint + prettier` preset config for JavaScript
     - [@ombro/eslint-config-typescript](./packages/eslint-config-typescript): `eslint + prettier` preset config for TypeScript

@@ -39,7 +39,7 @@
     "@changesets/cli": "^2.24.3",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
-    "@ombro/ts-config": "workspace:*",
+    "@ombro/tsconfig": "workspace:*",
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "^8.2.3",
     "@types/node": "^17.0.18",

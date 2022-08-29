@@ -1,6 +1,6 @@
 import path from 'node:path'
 import fs from 'fs-extra'
-import { prompt } from 'inquirer'
+import inquirer from 'inquirer'
 
 const _REPO_ = path.resolve(__dirname, '..')
 const _TPL_ = path.join(_REPO_, '.tpl')
@@ -15,7 +15,7 @@ type Answers = {
  * interactive create new preset package
  */
 export async function createPresetPackage() {
-  const { folderName, packageName, description } = await prompt<Answers>([
+  const { folderName, packageName, description } = await inquirer.prompt<Answers>([
     {
       name: 'folderName',
       message: 'What is preset folder name?',

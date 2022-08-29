@@ -3,7 +3,7 @@
   "version": "1.4.2",
   "description": "Shared TypeScript tsconfig.json",
   "engines": {
-    "node": ">=12"
+    "node": ">=v12.22.12"
   },
   "keywords": [
     "tsconfig",

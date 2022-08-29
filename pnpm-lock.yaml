@@ -19,7 +19,7 @@ importers:
       eslint: ^8.23.0
       eslint-config-prettier: ^8.5.0
       execa: ^6.1.0
-      husky: ^6.0.0
+      husky: ^8.0.1
       inquirer: ^9.1.0
       lint-staged: ^11.2.6
       prettier: ^2.7.1
@@ -43,7 +43,7 @@ importers:
       eslint: 8.23.0
       eslint-config-prettier: 8.5.0_eslint@8.23.0
       execa: 6.1.0
-      husky: 6.0.0
+      husky: 8.0.1
       inquirer: 9.1.0
       lint-staged: 11.2.6
       prettier: 2.7.1
@@ -4298,8 +4298,9 @@ packages:
     engines: {node: '>=12.20.0'}
     dev: true
 
-  /husky/6.0.0:
-    resolution: {integrity: sha512-SQS2gDTB7tBN486QSoKPKQItZw97BMOd+Kdb6ghfpBc0yXyzrddI0oDV5MkDAbuB4X2mO3/nj60TRMcYxwzZeQ==}
+  /husky/8.0.1:
+    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 

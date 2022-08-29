@@ -1,4 +1,4 @@
-# @ombro/ts-config
+# @ombro/tsconfig
 
 ## 1.4.2
 

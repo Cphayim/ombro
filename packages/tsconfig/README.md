@@ -5,7 +5,7 @@
 ## Install
 
 ```sh
-npm install --save-dev @ombro/ts-config
+npm install --save-dev @ombro/tsconfig
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ Add `extends` to your project `tsconfig.json`
 
 ```json
 {
-  "extends": "@ombro/ts-config/tsconfig.json",
+  "extends": "@ombro/tsconfig/tsconfig.json",
   "compilerOptions": {
     "outDir": "dist"
   }
@@ -27,7 +27,7 @@ Add `extends` to your project `tsconfig.json`
 
 ```json
 {
-  "extends": "@ombro/ts-config/tsconfig.cjs.json",
+  "extends": "@ombro/tsconfig/tsconfig.cjs.json",
   "compilerOptions": {
     "outDir": "dist"
   }

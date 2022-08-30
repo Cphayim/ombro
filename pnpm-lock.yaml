@@ -7,6 +7,7 @@ importers:
       '@changesets/cli': ^2.24.3
       '@commitlint/cli': ^12.1.4
       '@commitlint/config-conventional': ^12.1.4
+      '@ombro/eslint-config-typescript': workspace:*
       '@ombro/tsconfig': workspace:*
       '@types/fs-extra': ^9.0.13
       '@types/inquirer': ^9.0.1
@@ -31,6 +32,7 @@ importers:
       '@changesets/cli': 2.24.3
       '@commitlint/cli': 12.1.4
       '@commitlint/config-conventional': 12.1.4
+      '@ombro/eslint-config-typescript': link:packages/eslint-config-typescript
       '@ombro/tsconfig': link:packages/tsconfig
       '@types/fs-extra': 9.0.13
       '@types/inquirer': 9.0.1

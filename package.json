@@ -17,7 +17,7 @@
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "new": "tsx scripts/new.ts",
-    "lint": "eslint packages/*/src/**.ts",
+    "lint": "eslint packages/ --ext .ts --fix --ignore-path .gitignore",
     "format": "prettier --write --parser typescript \"packages/**/*.ts\"",
     "commit": "git add . && cz"
   },
@@ -39,6 +39,7 @@
     "@changesets/cli": "^2.24.3",
     "@commitlint/cli": "^12.1.4",
     "@commitlint/config-conventional": "^12.1.4",
+    "@ombro/eslint-config-typescript": "workspace:*",
     "@ombro/tsconfig": "workspace:*",
     "@types/fs-extra": "^9.0.13",
     "@types/inquirer": "^9.0.1",

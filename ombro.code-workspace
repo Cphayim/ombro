@@ -13,7 +13,7 @@
       "path": "packages/node"
     },
     {
-      "name": "📦 @ombro/ts-config",
+      "name": "📦 @ombro/tsconfig",
       "path": "packages/tsconfig"
     }
   ],

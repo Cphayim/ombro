@@ -1,6 +1,6 @@
 {
   "name": "@ombro/logger",
-  "version": "1.5.5",
+  "version": "2.0.0",
   "description": "Provides preset and custom Node.js log output tools",
   "keywords": [
     "log",
@@ -10,11 +10,12 @@
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro/",
   "license": "MIT",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "publishConfig": {
     "access": "public"
   },

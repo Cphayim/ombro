@@ -1,5 +1,12 @@
 # @ombro/logger
 
+## 2.0.0
+
+### Major Changes
+
+- Only ESM is supported
+- Updated some dependencies
+
 ## 1.5.5
 
 ### Patch Changes

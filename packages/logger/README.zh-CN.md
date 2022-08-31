@@ -12,8 +12,12 @@
 
 ```sh
 $ npm install @ombro/logger
-# or
-$ yarn add @ombro/logger
+```
+
+注意，自 `v2.0.0` 开始仅支持 ESM 模块导入，如果您需要使用 `require()` 来导入 `CommonJS` 模块，请安装 `v1.5.5`
+
+```sh
+$ npm  install @ombro/logger@1.5.5
 ```
 
 ## 使用

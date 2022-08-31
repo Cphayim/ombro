@@ -1,4 +1,5 @@
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import fs from 'fs-extra'
 import inquirer from 'inquirer'
 
@@ -57,6 +58,6 @@ export async function createPresetPackage() {
   console.log(`${packageName} created: presets/${folderName}`)
 }
 
-if (require.main === module) {
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
   createPresetPackage()
 }

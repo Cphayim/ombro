@@ -12,8 +12,12 @@ Provides preset and custom Node.js log output tools
 
 ```sh
 $ npm install @ombro/logger
-# or
-$ yarn add @ombro/logger
+```
+
+Note that only ESM module imports are supported since `v2.0.0`, if you need to use `require()` to import `CommonJS` modules, please install `v1.5.5`
+
+```sh
+$ npm  install @ombro/logger@1.5.5
 ```
 
 ## Usage

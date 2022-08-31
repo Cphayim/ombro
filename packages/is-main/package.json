@@ -1,0 +1,30 @@
+{
+  "name": "@ombro/is-main",
+  "version": "0.1.0",
+  "description": "Check if the current module is an entry module for ESM",
+  "author": "Cphayim <i@cphayim.me>",
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/is-main"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "clean": "rimraf dist coverage *.tsbuildinfo",
+    "prepublish": "pnpm run clean && pnpm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  }
+}

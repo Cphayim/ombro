@@ -1,5 +1,11 @@
 # @ombro/eslint-config-vue2-typescript
 
+## 0.1.2
+
+### Patch Changes
+
+- Update dependencies
+
 ## 0.1.1
 
 ### Patch Changes

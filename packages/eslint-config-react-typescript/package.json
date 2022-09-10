@@ -1,6 +1,6 @@
 {
   "name": "@ombro/eslint-config-react-typescript",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shared eslint config for React + TypeScript",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",

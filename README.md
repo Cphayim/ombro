@@ -12,10 +12,11 @@
 
 </div>
 
-## Packages
+## What's in here?
 
 - **Node.js utils**
   - [@ombro/logger](./packages/logger): Provides preset and custom Node.js log output tools
+  - [@ombro/is-main](./packages/is-main): Check if the current module is an entry module for ESM
 - **Browser utils**
 - **Runtime**
   - [@ombro/node](./packages/node): A zero-configuration, quick-start ESNext Node.js runtime
@@ -33,6 +34,10 @@
     - [@ombro/eslint-config-react-typescript](./packages/eslint-config-react-typescript): `eslint + prettier` preset config for for React
   - StyleLint + Prettier
     - [@ombro/stylelint-config](./packages/stylelint-config): `stylelint + prettier` preset config for CSS/SCSS
+
+## Changelogs
+
+Provided in specific package
 
 ## License
 

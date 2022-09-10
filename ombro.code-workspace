@@ -9,12 +9,12 @@
       "path": "packages/logger"
     },
     {
-      "name": "📦 @ombro/node",
-      "path": "packages/node"
-    },
-    {
       "name": "📦 @ombro/tsconfig",
       "path": "packages/tsconfig"
+    },
+    {
+      "name": "📦 @ombro/is-main",
+      "path": "packages/is-main"
     }
   ],
   "settings": {}

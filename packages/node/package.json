@@ -39,7 +39,7 @@
     "@babel/plugin-proposal-pipeline-operator": "^7.18.9",
     "@babel/preset-env": "^7.19.0",
     "execa": "^5.1.1",
-    "find-up": "^4.1.0",
+    "find-up": "^6.3.0",
     "minimist": "^1.2.6"
   }
 }

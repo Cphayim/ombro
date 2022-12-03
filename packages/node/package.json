@@ -33,13 +33,13 @@
     "url": "https://github.com/Cphayim/ombro/issues"
   },
   "dependencies": {
-    "@babel/core": "^7.19.0",
-    "@babel/node": "^7.18.10",
-    "@babel/plugin-proposal-decorators": "^7.19.0",
+    "@babel/core": "^7.20.5",
+    "@babel/node": "^7.20.5",
+    "@babel/plugin-proposal-decorators": "^7.20.5",
     "@babel/plugin-proposal-pipeline-operator": "^7.18.9",
-    "@babel/preset-env": "^7.19.0",
+    "@babel/preset-env": "^7.20.2",
     "execa": "^5.1.1",
     "find-up": "^4.1.0",
-    "minimist": "^1.2.6"
+    "minimist": "^1.2.7"
   }
 }

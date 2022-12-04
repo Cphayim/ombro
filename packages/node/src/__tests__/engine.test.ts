@@ -1,5 +1,5 @@
 import path from 'path'
-import { describe, beforeAll, afterAll, it, expect, vi } from 'vitest'
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
 describe.skip('@ombro/node', () => {
   beforeAll(() => {

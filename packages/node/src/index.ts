@@ -1,11 +1,13 @@
 #!/usr/bin/env node
+
 /*
  * @Author: Cphayim
  * @Date: 2019-06-11 09:13:09
  * @Description:
  */
 import path from 'path'
-import { createEngine, Engine } from './engine'
+
+import { Engine, createEngine } from './engine'
 import { log } from './utils'
 
 // Outside API call

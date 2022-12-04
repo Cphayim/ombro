@@ -1,5 +1,5 @@
-import process from 'node:process'
 import { createRequire } from 'node:module'
+import process from 'node:process'
 import { fileURLToPath } from 'node:url'
 
 export function isMain(meta: ImportMeta) {

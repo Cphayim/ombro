@@ -3,8 +3,8 @@
  * @Date: 2021-06-18 00:52:24
  * @Description: 日志
  */
+import readline from 'node:readline'
 
-import readline from 'readline'
 import chalk from 'chalk'
 import ora, { Ora } from 'ora'
 

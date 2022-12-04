@@ -1,5 +1,5 @@
-import { describe, beforeAll, afterEach, afterAll, it, vi, expect } from 'vitest'
 import readline from 'readline'
+import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from 'vitest'
 
 describe('@ombro/logger -> logger.ts -> log', () => {
   const CONTENT = 'content'

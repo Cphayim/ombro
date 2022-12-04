@@ -3,10 +3,11 @@
  * @Date: 2019-06-11 09:44:20
  * @Description:
  */
-import path from 'path'
-import fs from 'fs'
 import execa from 'execa'
 import findUp from 'find-up'
+import fs from 'fs'
+import path from 'path'
+
 import { log } from './utils'
 
 type BootstrapOptions = {

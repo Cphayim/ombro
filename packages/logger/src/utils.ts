@@ -1,4 +1,5 @@
-import util from 'util'
+import util from 'node:util'
+
 import chalk from 'chalk'
 
 export function chalkTag(msg: string): string {

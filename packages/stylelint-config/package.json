@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "postcss": "^8.4.21",
-    "prettier": "^2.8.3",
+    "prettier": "^2.8.4",
     "stylelint": "^14.16.1"
   }
 }

@@ -1,0 +1,43 @@
+{
+  "name": "@ombro/dnd-backend",
+  "version": "0.1.4",
+  "description": "dnd backend set",
+  "author": "Cphayim <i@cphayim.me>",
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./html5": "./dist/html5.js",
+    "./test": "./dist/test.js",
+    "./touch": "./dist/touch.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/dnd-backend"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "clean": "rimraf dist coverage *.tsbuildinfo",
+    "prepublish": "pnpm run clean && pnpm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  },
+  "dependencies": {
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dnd-test-backend": "^16.0.1",
+    "react-dnd-touch-backend": "^16.0.1"
+  }
+}

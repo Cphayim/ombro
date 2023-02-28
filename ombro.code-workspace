@@ -5,10 +5,6 @@
       "path": "."
     },
     {
-      "name": "🚀 @ombro/dnd-backend",
-      "path": "packages/dnd-backend"
-    },
-    {
       "name": "📦 @ombro/is-main",
       "path": "packages/is-main"
     },

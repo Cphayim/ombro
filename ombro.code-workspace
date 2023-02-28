@@ -1,8 +1,12 @@
 {
   "folders": [
     {
-      "name": "✨ ombro",
+      "name": "✨ ombro-monorepo",
       "path": "."
+    },
+    {
+      "name": "📦 @ombro/is-main",
+      "path": "packages/is-main"
     },
     {
       "name": "📦 @ombro/logger",
@@ -11,10 +15,6 @@
     {
       "name": "📦 @ombro/tsconfig",
       "path": "packages/tsconfig"
-    },
-    {
-      "name": "📦 @ombro/is-main",
-      "path": "packages/is-main"
     }
   ],
   "settings": {}

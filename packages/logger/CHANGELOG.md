@@ -1,5 +1,11 @@
 # @ombro/logger
 
+## 2.0.1
+
+### Patch Changes
+
+- Update dependencies
+
 ## 2.0.0
 
 ### Major Changes

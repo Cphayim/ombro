@@ -1,5 +1,11 @@
 # @ombro/node
 
+## 1.2.2
+
+### Patch Changes
+
+- Update dependencies
+
 ## 1.2.1
 
 ### Patch Changes

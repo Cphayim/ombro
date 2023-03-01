@@ -1,5 +1,11 @@
 # @ombro/eslint-config-vue3-typescript
 
+## 0.1.3
+
+### Patch Changes
+
+- Update dependencies
+
 ## 0.1.2
 
 ### Patch Changes

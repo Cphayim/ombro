@@ -1,6 +1,6 @@
 {
   "name": "@ombro/logger",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides preset and custom Node.js log output tools",
   "keywords": [
     "log",

@@ -1,5 +1,11 @@
 # @ombro/tsconfig
 
+## 1.4.3
+
+### Patch Changes
+
+- Update dependencies
+
 ## 1.4.2
 
 ### Patch Changes

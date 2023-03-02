@@ -1,6 +1,6 @@
 {
   "name": "@ombro/dnd-vue",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "dnd vue",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
@@ -24,10 +24,9 @@
     "directory": "packages/dnd-vue"
   },
   "scripts": {
-    "dev": "tsc -w",
-    "build": "tsc",
-    "clean": "rimraf dist coverage *.tsbuildinfo",
-    "prepublish": "pnpm run clean && pnpm run build"
+    "dev": "vite build --mode=development --watch",
+    "build": "vite build",
+    "prepublish": "pnpm run build"
   },
   "bugs": {
     "url": "https://github.com/Cphayim/ombro/issues"

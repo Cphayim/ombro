@@ -36,7 +36,7 @@
   "dependencies": {
     "@types/dedent": "^0.7.0",
     "@types/figlet": "^1.5.5",
-    "boxen": "^7.0.1",
+    "boxen": "^7.0.2",
     "chalk": "^4.1.2",
     "dedent": "^0.7.0",
     "figlet": "^1.5.2",

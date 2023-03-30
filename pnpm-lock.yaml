@@ -270,13 +270,13 @@ importers:
       stylelint-config-recess-order: ^4.0.0
       stylelint-config-standard: ^30.0.1
       stylelint-config-standard-scss: ^7.0.1
-      stylelint-prettier: ^2.0.0
+      stylelint-prettier: ^3.0.0
     dependencies:
       stylelint-config-prettier: 9.0.5_stylelint@15.3.0
       stylelint-config-recess-order: 4.0.0_stylelint@15.3.0
       stylelint-config-standard: 30.0.1_stylelint@15.3.0
       stylelint-config-standard-scss: 7.0.1_xd434hbhlikjpobg3rgppuzh3e
-      stylelint-prettier: 2.0.0_bkgupnw2z7s4dpqf54qd2i5i6i
+      stylelint-prettier: 3.0.0_bkgupnw2z7s4dpqf54qd2i5i6i
     devDependencies:
       postcss: 8.4.21
       prettier: 2.8.5
@@ -6869,9 +6869,9 @@ packages:
       stylelint: 15.3.0
     dev: false
 
-  /stylelint-prettier/2.0.0_bkgupnw2z7s4dpqf54qd2i5i6i:
-    resolution: {integrity: sha512-jvT3G+9lopkeB0ARmDPszyfaOnvnIF+30QCjZxyt7E6fynI1T9mOKgYDNb9bXX17M7PXMZaX3j/26wqakjp1tw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+  /stylelint-prettier/3.0.0_bkgupnw2z7s4dpqf54qd2i5i6i:
+    resolution: {integrity: sha512-kIks1xw6np0zElokMT2kP6ar3S4MBoj6vUtPJuND1pFELMpZxVS/0uHPR4HDAVn0WAD3I5oF0IA3qBFxBpMkLg==}
+    engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       prettier: '>=2.0.0'
       stylelint: '>=14.0.0'

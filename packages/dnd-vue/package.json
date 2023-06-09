@@ -6,8 +6,7 @@
   "homepage": "https://github.com/Cphayim/ombro#readme",
   "license": "MIT",
   "files": [
-    "dist",
-    "*.d.ts"
+    "dist"
   ],
   "type": "module",
   "main": "dist/index.js",
@@ -25,7 +24,7 @@
   },
   "scripts": {
     "dev": "vite build --mode=development --watch",
-    "build": "vite build",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
     "prepublish": "pnpm run build"
   },
   "bugs": {

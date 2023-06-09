@@ -1,5 +1,11 @@
 # @ombro/tsconfig
 
+## 2.0.0
+
+### Major Changes
+
+- Upgrade to TypeScript 5
+
 ## 1.4.3
 
 ### Patch Changes

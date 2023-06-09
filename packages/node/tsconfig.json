@@ -1,7 +1,6 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@ombro/tsconfig/cjs",
   "compilerOptions": {
-    "module": "commonjs",
     "outDir": "dist"
   },
   "include": ["src/**/*"],

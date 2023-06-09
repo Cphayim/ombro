@@ -1,0 +1,13 @@
+// Compile the target-related configurations
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../common/common.json",
+  "compilerOptions": {
+    "target": "ES2021", // Node 16
+    "lib": ["DOM", "DOM.Iterable", "ES2021"],
+    "moduleResolution": "node",
+    "moduleDetection": "force",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": false
+  }
+}

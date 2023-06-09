@@ -1,10 +1,5 @@
+// CommonJS
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ES2019", // Node.js 12
-    "esModuleInterop": true,
-    "lib": ["ES2019", "DOM"],
-    "jsx": "react"
-  }
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./target/cjs.json"
 }

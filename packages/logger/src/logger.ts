@@ -6,7 +6,7 @@
 import readline from 'node:readline'
 
 import chalk from 'chalk'
-import ora, { Ora } from 'ora'
+import ora, { type Ora } from 'ora'
 
 import './type'
 import { blackBold, chalkTag, format, inspect } from './utils'

@@ -1,9 +1,9 @@
 {
   "name": "@ombro/tsconfig",
-  "version": "1.4.3",
+  "version": "2.0.0",
   "description": "Shared TypeScript tsconfig.json",
   "engines": {
-    "node": "^14.13.1 || >=16.0.0"
+    "node": ">=16.0.0"
   },
   "keywords": [
     "tsconfig",
@@ -13,9 +13,13 @@
   "homepage": "https://github.com/Cphayim/ombro#readme",
   "license": "MIT",
   "main": "tsconfig.json",
-  "files": [
-    "tsconfig*.json"
-  ],
+  "exports": {
+    ".": "./tsconfig.json",
+    "./esm": "./tsconfig.esm.json",
+    "./cjs": "./tsconfig.cjs.json",
+    "./tsconfig.esm.json": "./tsconfig.esm.json",
+    "./tsconfig.cjs.json": "./tsconfig.cjs.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cphayim/ombro.git",
@@ -27,5 +31,8 @@
   },
   "bugs": {
     "url": "https://github.com/Cphayim/ombro/issues"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }

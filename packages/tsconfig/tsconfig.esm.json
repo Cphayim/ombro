@@ -1,9 +1,5 @@
+// ESM
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "module": "ES2020",
-    "target": "ES2019", // Node.js 12
-    "lib": ["ES2019", "DOM"],
-    "jsx": "react"
-  }
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./target/esm.json"
 }

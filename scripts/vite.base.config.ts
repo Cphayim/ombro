@@ -1,9 +1,8 @@
 import { resolve } from 'node:path'
 
-import type { BuildOptions, UserConfig } from 'vite'
-import dts from 'vite-plugin-dts'
+import type { BuildOptions } from 'vite'
 
-export const EXTERNAL_REPO_PKG = /^@cphayim-enc\/(.*)/
+export const EXTERNAL_REPO_PKG = /^@ombro\/(.*)/
 
 export type CreateOptions = {
   mode: string
@@ -25,34 +24,4 @@ export const createBuild = ({ root }: CreateOptions) => {
     },
   }
   return build
-}
-
-export type CreateDTSPluginOptions = CreateOptions & {
-  skipDiagnostics?: boolean
-  rollupTypes?: boolean
-}
-
-export const createDTSPlugin = ({
-  mode,
-  root,
-  skipDiagnostics,
-  rollupTypes = true,
-}: CreateDTSPluginOptions) => {
-  return dts({
-    skipDiagnostics,
-    // entryRoot: resolve(__dirname, 'src'),
-    tsConfigFilePath: resolve(root, 'tsconfig.json'),
-    rollupTypes,
-    copyDtsFiles: false,
-    staticImport: true,
-    beforeWriteFile: (filePath, content) => {
-      return { filePath, content }
-    },
-  })
-}
-
-export const addDTSPlugin = (config: UserConfig, options: CreateDTSPluginOptions) => {
-  if (options.mode === 'production') {
-    config.plugins = [...(config.plugins ?? []), createDTSPlugin(options)]
-  }
 }

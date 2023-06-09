@@ -5,9 +5,9 @@
   "repository": "git@github.com:Cphayim/ombro.git",
   "license": "MIT",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=16.20.0"
   },
-  "packageManager": "pnpm@7.30.0",
+  "packageManager": "pnpm@8.6.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",

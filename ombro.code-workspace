@@ -13,6 +13,10 @@
       "path": "packages/logger"
     },
     {
+      "name": "📦 @ombro/mitten",
+      "path": "packages/mitten"
+    },
+    {
       "name": "📦 @ombro/tsconfig",
       "path": "packages/tsconfig"
     }

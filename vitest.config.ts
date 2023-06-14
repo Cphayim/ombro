@@ -4,11 +4,7 @@ export default defineConfig({
   test: {
     root: __dirname,
     environment: 'node',
-    include: [
-      'packages/**/__tests__/**/*.ts',
-      'packages/**/*.{spec,test}.ts',
-      '!**/*.d.ts', //
-    ],
+    include: ['packages/**/*.{spec,test}.ts'],
     coverage: {
       include: ['packages/**/src/**/*.ts'],
       reporter: ['text', 'json'],

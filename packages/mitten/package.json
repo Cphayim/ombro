@@ -7,6 +7,14 @@
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -20,8 +28,8 @@
     "directory": "packages/mitten"
   },
   "scripts": {
-    "dev": "tsc -w",
-    "build": "tsc",
+    "dev": "vite build --watch",
+    "build": "vite build && tsc --declaration --emitDeclarationOnly",
     "clean": "rimraf dist coverage *.tsbuildinfo",
     "prepublish": "pnpm run clean && pnpm run build"
   },

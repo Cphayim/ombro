@@ -1,7 +1,7 @@
 import path from 'path'
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest'
 
-describe.skip('@ombro/node', () => {
+describe('@ombro/node', () => {
   beforeAll(() => {
     vi.spyOn(console, 'log').mockImplementation(() => void 0)
   })

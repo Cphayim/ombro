@@ -1,6 +1,6 @@
 {
   "name": "@ombro/mitten",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Tiny functional event emitter",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",

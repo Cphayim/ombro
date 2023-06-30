@@ -7,9 +7,10 @@ export const EXTERNAL_REPO_PKG = /^@ombro\/(.*)/
 export type CreateOptions = {
   mode: string
   root: string
+  external?: (string | RegExp)[]
 }
 
-export const createBuild = ({ root }: CreateOptions) => {
+export const createBuild = ({ root, external }: CreateOptions) => {
   const build: BuildOptions = {
     outDir: resolve(root, 'dist'),
     emptyOutDir: true,
@@ -20,7 +21,7 @@ export const createBuild = ({ root }: CreateOptions) => {
       fileName: (format) => `index${format === 'es' ? '.js' : '.cjs'}`,
     },
     rollupOptions: {
-      external: [EXTERNAL_REPO_PKG],
+      external: [EXTERNAL_REPO_PKG, ...(external ?? [])],
     },
   }
   return build

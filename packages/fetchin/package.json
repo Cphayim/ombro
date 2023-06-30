@@ -1,0 +1,43 @@
+{
+  "name": "@ombro/fetchin",
+  "version": "0.0.1",
+  "description": "http client",
+  "author": "Cphayim <i@cphayim.me>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build --mode=development --watch",
+    "build": "vite build && tsc --declaration --emitDeclarationOnly",
+    "clean": "rimraf dist coverage *.tsbuildinfo",
+    "prepublish": "pnpm run clean && pnpm run build"
+  },
+  "dependencies": {
+    "@ombro/fetchin-locale": "workspace:*",
+    "axios": "^0.27.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/fetchin"
+  },
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  }
+}

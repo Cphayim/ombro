@@ -11,24 +11,24 @@
 [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-f49033.svg)](https://pnpm.io/)
 
 <div>
-  <span>English</span> | <a href="./README_zh.md">简体中文</a>
+  <a href="./README.md">English</a> | <span>简体中文</span>
 </div>
 </br>
 </div>
 
-OMBRO is a JavaScript toolbox that provides various small libraries containing many useful utility functions and modules, covering multiple domains such as general-purpose, browser-side, server-side, build tool extensions and presets.
+OMBRO 是一个提供各种小型库的 JavaScript 工具箱，其中包含了许多实用的工具函数和模块，涵盖了通用函数库、浏览器端、服务端、构建工具扩展包及预设配置等多个领域。
 
-These libraries not only exhibit high reusability and composability, but also come with good documentation and test coverage, enabling developers to quickly build high-quality applications. Moreover, OMBRO features a lightweight, easy-to-use, and extensible nature, suitable for projects and teams of various sizes.
+这些库不仅具有高度的可重用性和可组合性，而且还具有良好的文档和测试覆盖率，可以帮助开发人员快速构建高质量的应用程序。此外，OMBRO 还具有轻量级、易于使用和可扩展的特点，适用于各种规模的项目和团队。
 
 ## What's in here?
 
 - **General**
-  - [@ombro/mitten](./packages/mitten): A tiny functional event emitter
+  - [@ombro/mitten](./packages/mitten)：一个轻量级的函数式事件发射器
 - **Browser**
 - **Server**
-  - [@ombro/is-main](./packages/is-main): Check if the current module is an entry module for ESM
-  - [@ombro/logger](./packages/logger): Provides preset and custom Node.js log output tools
-- **Preset**
+  - [@ombro/is-main](./packages/is-main)：检查当前模块是否为 ESM 入口模块
+  - [@ombro/logger](./packages/logger)：提供预置和自定义 Node.js 日志输出工具
+- **Preset config**
   - TypeScript
     - [@ombro/tsconfig](./packages/tsconfig): `tsconfig.json` preset config for Typescript
   - ESLint + Prettier

@@ -94,6 +94,9 @@ export const createMatchResponseBodyCodeInterceptor = ({
         } catch (error) {
           logger.error(error)
         }
+      } else {
+        // boolean
+        matchResult = !!matchHandler
       }
       if (!matchResult) {
         throw new Error(createErrorMessage(BLOCKED_RESPONSE_ERROR_MESSAGE(data.code)))

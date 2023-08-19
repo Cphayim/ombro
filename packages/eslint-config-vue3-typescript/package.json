@@ -1,6 +1,6 @@
 {
   "name": "@ombro/eslint-config-vue3-typescript",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Shared eslint config for Vue3 + TypeScript",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "eslint": "^6.2.0 || ^7.0.0 || ^8.0.0",
-    "prettier": "^2.0.0",
+    "prettier": "^2.0.0 || ^3.0.0",
     "typescript": "*"
   },
   "dependencies": {

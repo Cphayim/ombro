@@ -1,5 +1,11 @@
 # @ombro/stylelint-config
 
+## 0.1.5
+
+### Patch Changes
+
+- Upgrade prettier version
+
 ## 0.1.4
 
 ### Patch Changes

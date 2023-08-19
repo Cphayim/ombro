@@ -2,6 +2,8 @@
 
 [![npm package](https://badgen.net/npm/v/@ombro/mitten)](https://npmjs.com/package/@ombro/mitten)
 
+English | [简体中文](./README_zh.md)
+
 Mitten is a lightweight event emitter library for TypeScript that allows you to create, manage, and emit custom events.
 
 ## Installation

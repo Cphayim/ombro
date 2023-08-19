@@ -5,6 +5,14 @@
       "path": "."
     },
     {
+      "name": "📦 @ombro/fetchin",
+      "path": "packages/fetchin"
+    },
+    {
+      "name": "📦 @ombro/fetchin-locale",
+      "path": "packages/fetchin-locale"
+    },
+    {
       "name": "📦 @ombro/is-main",
       "path": "packages/is-main"
     },

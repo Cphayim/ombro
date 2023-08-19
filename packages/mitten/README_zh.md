@@ -2,6 +2,8 @@
 
 [![npm package](https://badgen.net/npm/v/@ombro/mitten)](https://npmjs.com/package/@ombro/mitten)
 
+[English](./README.md) | 简体中文
+
 Mitten 是一个轻量级的 TypeScript 事件发射器库，允许您创建、管理和触发自定义事件。
 
 ## 安装

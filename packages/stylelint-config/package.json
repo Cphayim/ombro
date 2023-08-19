@@ -1,6 +1,6 @@
 {
   "name": "@ombro/stylelint-config",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Shared stylelint config for CSS/SCSS",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "postcss": ">=8.0.0",
-    "prettier": "^2.0.0",
+    "prettier": "^2.0.0 || ^3.0.0",
     "stylelint": ">=14.0.0"
   },
   "dependencies": {

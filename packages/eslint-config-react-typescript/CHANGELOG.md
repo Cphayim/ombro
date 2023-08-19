@@ -1,5 +1,11 @@
 # @ombro/eslint-config-react-typescript
 
+## 0.1.4
+
+### Patch Changes
+
+- Upgrade prettier version
+
 ## 0.1.3
 
 ### Patch Changes

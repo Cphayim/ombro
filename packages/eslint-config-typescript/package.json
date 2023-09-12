@@ -27,13 +27,13 @@
     "typescript": "*"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
-    "eslint-config-prettier": "^8.8.0"
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint-config-prettier": "^8.10.0"
   },
   "devDependencies": {
-    "eslint": "^8.36.0",
-    "prettier": "^2.8.5",
+    "eslint": "^8.49.0",
+    "prettier": "^2.8.8",
     "typescript": "^4.5.5"
   }
 }

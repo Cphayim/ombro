@@ -8,8 +8,8 @@ import readline from 'node:readline'
 import chalk from 'chalk'
 import ora, { type Ora } from 'ora'
 
-import './type'
-import { blackBold, chalkTag, format, inspect } from './utils'
+import './type.js'
+import { blackBold, chalkTag, format, inspect } from './utils.js'
 
 type LevelKey = typeof process.env.LOGGER_LEVEL
 type LevelValue = number

@@ -31,10 +31,10 @@
     "url": "https://github.com/Cphayim/ombro/issues"
   },
   "dependencies": {
-    "vue3-dnd": "^2.0.3"
+    "vue3-dnd": "^2.1.0"
   },
   "devDependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.4.21"
   },
   "peerDependencies": {
     "vue": "^3.2.25"

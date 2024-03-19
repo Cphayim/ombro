@@ -23,6 +23,7 @@ These libraries not only exhibit high reusability and composability, but also co
 ## What's in here?
 
 - **General**
+  - [@ombro/cli-chat](./packages/cli-chat): A CLI chatGPT tool
   - [@ombro/mitten](./packages/mitten): A tiny functional event emitter
 - **Browser**
 - **Server**

@@ -1,9 +1,10 @@
 import fs from 'node:fs'
 import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 import { colors } from '@ombro/logger'
 
-const __dirname = new URL('.', import.meta.url).pathname
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
 const pkg = JSON.parse(fs.readFileSync(resolve(__dirname, '../package.json'), 'utf8'))
 
 export const PACKAGE_NAME = pkg.name

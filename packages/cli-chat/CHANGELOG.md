@@ -1,5 +1,11 @@
 # @ombro/cli-chat
 
+## 1.0.1
+
+### Patch Changes
+
+- Fix path parse incorrect in Windows
+
 ## 1.0.0
 
 ### Major Changes

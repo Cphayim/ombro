@@ -1,17 +1,16 @@
 {
-  "name": "@ombro/cli-chat",
-  "version": "1.0.0",
-  "description": "OChat is a CLI chat tool. With the help of OpenAI services, it can answer any question you have.",
+  "name": "@ombro/cli-helper",
+  "version": "0.0.1",
+  "description": "cli-helper",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
   "license": "MIT",
   "type": "module",
-  "bin": {
-    "ombro-cli-chat": "dist/index.js",
-    "ochat": "dist/index.js"
-  },
-  "module": "dist/index.js",
   "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "files": [
     "dist"
   ],
@@ -22,7 +21,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cphayim/ombro.git",
-    "directory": "packages/cli-chat"
+    "directory": "packages/cli-helper"
   },
   "scripts": {
     "dev": "tsc -w",
@@ -34,14 +33,9 @@
     "url": "https://github.com/Cphayim/ombro/issues"
   },
   "dependencies": {
-    "@ombro/cli-helper": "workspace:^",
-    "@ombro/is-main": "workspace:^",
-    "@ombro/logger": "workspace:^",
-    "dotenv": "^16.4.5",
-    "inquirer": "^9.2.16",
-    "openai": "^4.29.1"
+    "fs-extra": "^11.2.0"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.7"
+    "@types/fs-extra": "^11.0.4"
   }
 }

@@ -95,9 +95,9 @@ importers:
 
   packages/cli-chat:
     dependencies:
-      '@ombro/fetchin':
+      '@ombro/cli-helper':
         specifier: workspace:^
-        version: link:../fetchin
+        version: link:../cli-helper
       '@ombro/is-main':
         specifier: workspace:^
         version: link:../is-main
@@ -107,9 +107,6 @@ importers:
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
-      fs-extra:
-        specifier: ^11.2.0
-        version: 11.2.0
       inquirer:
         specifier: ^9.2.16
         version: 9.2.16
@@ -117,12 +114,19 @@ importers:
         specifier: ^4.29.1
         version: 4.29.1
     devDependencies:
-      '@types/fs-extra':
-        specifier: ^11.0.4
-        version: 11.0.4
       '@types/inquirer':
         specifier: ^9.0.7
         version: 9.0.7
+
+  packages/cli-helper:
+    dependencies:
+      fs-extra:
+        specifier: ^11.2.0
+        version: 11.2.0
+    devDependencies:
+      '@types/fs-extra':
+        specifier: ^11.0.4
+        version: 11.0.4
 
   packages/dnd-backend:
     dependencies:
@@ -2120,7 +2124,7 @@ packages:
     dependencies:
       '@commitlint/top-level': 17.8.1
       '@commitlint/types': 17.8.1
-      fs-extra: 11.1.1
+      fs-extra: 11.2.0
       git-raw-commits: 2.0.11
       minimist: 1.2.8
     dev: true
@@ -5251,15 +5255,6 @@ packages:
       web-streams-polyfill: 4.0.0-beta.3
     dev: false
 
-  /fs-extra@11.1.1:
-    resolution: {integrity: sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==}
-    engines: {node: '>=14.14'}
-    dependencies:
-      graceful-fs: 4.2.9
-      jsonfile: 6.1.0
-      universalify: 2.0.0
-    dev: true
-
   /fs-extra@11.2.0:
     resolution: {integrity: sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==}
     engines: {node: '>=14.14'}
@@ -5267,7 +5262,6 @@ packages:
       graceful-fs: 4.2.9
       jsonfile: 6.1.0
       universalify: 2.0.0
-    dev: false
 
   /fs-extra@7.0.1:
     resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}

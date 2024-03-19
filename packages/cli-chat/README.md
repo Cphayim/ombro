@@ -4,7 +4,7 @@
 
 English | [简体中文](./README_zh.md)
 
-Ochat is a command line interface chat tool. With the help of OpenAI services, it can answer any question you have.
+OChat is a command line interface chat tool. With the help of OpenAI services, it can answer any question you have.
 
 ![guide](https://cdn.jsdelivr.net/gh/cphayim/oss@main/images/2024/03/20/010945Yxy2YJ.gif)
 

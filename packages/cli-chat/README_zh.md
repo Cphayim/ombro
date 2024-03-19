@@ -4,7 +4,7 @@
 
 [English](./README.md) | 简体中文
 
-Ochat 是一个命令行界面聊天工具。通过 OpenAI 服务的帮助，它可以回答你的任何问题。
+OChat 是一个命令行界面聊天工具。通过 OpenAI 服务的帮助，它可以回答你的任何问题。
 
 ![guide](https://cdn.jsdelivr.net/gh/cphayim/oss@main/images/2024/03/20/010945Yxy2YJ.gif)
 

@@ -1,7 +1,7 @@
 {
   "name": "@ombro/cli-chat",
-  "version": "0.0.1",
-  "description": "A command-line chatGPT tool",
+  "version": "1.0.0",
+  "description": "OChat is a CLI chat tool. With the help of OpenAI services, it can answer any question you have.",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",
   "license": "MIT",

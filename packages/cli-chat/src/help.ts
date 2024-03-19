@@ -2,7 +2,7 @@ import { colors } from '@ombro/logger'
 
 export function printHelp() {
   const content = `
-Ochat is a command line interface chat tool. With the help of OpenAI services, it can answer any question you have.
+OChat is a command line interface chat tool. With the help of OpenAI services, it can answer any question you have.
 
 > start chatting with GPT-3.5:
   ${colors.bold('ochat')}

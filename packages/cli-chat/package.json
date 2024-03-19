@@ -1,0 +1,49 @@
+{
+  "name": "@ombro/cli-chat",
+  "version": "0.0.1",
+  "description": "A command-line chatGPT tool",
+  "author": "Cphayim <i@cphayim.me>",
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "ombro-cli-chat": "dist/index.js",
+    "ochat": "dist/index.js"
+  },
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/cli-chat"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "clean": "rimraf dist coverage *.tsbuildinfo",
+    "prepublish": "pnpm run clean && pnpm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  },
+  "dependencies": {
+    "@ombro/fetchin": "workspace:^",
+    "@ombro/is-main": "workspace:^",
+    "@ombro/logger": "workspace:^",
+    "dotenv": "^16.4.5",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.16",
+    "openai": "^4.29.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7"
+  }
+}

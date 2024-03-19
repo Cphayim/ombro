@@ -9,4 +9,4 @@ import dedent from 'dedent'
 import figlet from 'figlet'
 
 export { figlet, colors, dedent, boxen }
-export * as logger from './logger'
+export * as logger from './logger.js'

@@ -1,0 +1,41 @@
+{
+  "name": "@ombro/cli-helper",
+  "version": "0.0.1",
+  "description": "cli-helper",
+  "author": "Cphayim <i@cphayim.me>",
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/cli-helper"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "clean": "rimraf dist coverage *.tsbuildinfo",
+    "prepublish": "pnpm run clean && pnpm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  },
+  "dependencies": {
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4"
+  }
+}

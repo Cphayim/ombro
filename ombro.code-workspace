@@ -5,6 +5,10 @@
       "path": "."
     },
     {
+      "name": "📦 @ombro/cli-chat",
+      "path": "packages/cli-chat"
+    },
+    {
       "name": "📦 @ombro/fetchin",
       "path": "packages/fetchin"
     },

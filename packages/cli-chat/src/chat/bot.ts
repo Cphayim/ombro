@@ -4,7 +4,9 @@ import OpenAI from 'openai'
 import { getConfig } from '../config.js'
 import { ROLES, UNCONFIG_WARN } from '../constants.js'
 import { startLoading, stopLoading } from '../loading.js'
-import { addBotMessage, messages } from './message.js'
+import { execExtensionTaskQueue } from './extensions.js'
+import { addBotMessage, getLastMessage, messages } from './message.js'
+import { getCurrentModel } from './model.js'
 
 let openAI: OpenAI
 
@@ -19,6 +21,10 @@ export function initBot() {
 }
 
 export async function botAnswer(stream = true) {
+  // 如果命中了扩展任务则跳过回答
+  const flag = await execExtensionTaskQueue(getLastMessage().content as string)
+  if (flag) return
+
   if (stream) {
     await streamAnswer()
   } else {
@@ -32,7 +38,7 @@ async function defaultAnswer() {
     startLoading(` ${ROLES.BOT.NAME} ${colors.gray('loading...')}`)
     const completion = await openAI.chat.completions.create({
       messages,
-      model: getModel(),
+      model: getCurrentModel().value,
     })
     stopLoading()
 
@@ -52,7 +58,7 @@ async function streamAnswer() {
     startLoading(` ${ROLES.BOT.NAME} ${colors.gray('loading...')}`)
     const completion = await openAI.chat.completions.create({
       messages,
-      model: getModel(),
+      model: getCurrentModel().value,
       stream: true,
     })
     stopLoading()
@@ -68,15 +74,6 @@ async function streamAnswer() {
   } catch ({ error }) {
     botOutput(error.message, { isError: true })
   }
-}
-
-function getModel() {
-  return process.argv.includes('--gpt-4') ? 'gpt-4-1106-preview' : 'gpt-3.5-turbo'
-}
-
-export function getModelDescription() {
-  const model = getModel()
-  return model === 'gpt-4-1106-preview' ? 'GPT-4' : 'GPT-3.5 Turbo'
 }
 
 export function botOutput(content: any, { isError = false, nowrap = false } = {}) {

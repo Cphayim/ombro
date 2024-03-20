@@ -1,5 +1,11 @@
 # @ombro/cli-chat
 
+## 1.1.0
+
+### Minor Changes
+
+- Support for runtime model switching is available. You just need to ask the Bot about 'model' or 'm'.
+
 ## 1.0.1
 
 ### Patch Changes

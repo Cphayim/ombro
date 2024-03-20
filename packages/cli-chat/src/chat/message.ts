@@ -16,3 +16,13 @@ export function addBotMessage(content: string | null) {
     content,
   })
 }
+
+// 查看最后一条消息
+export function getLastMessage() {
+  return messages[messages.length - 1]
+}
+
+// 清空消息
+export function clearMessages() {
+  messages.length = 0
+}

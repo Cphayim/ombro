@@ -29,8 +29,7 @@ export function chatTip(modelDesc: string) {
   console.log() // empty line
   console.log(`> Welcome to use ${PACKAGE_ALIAS}!`)
   console.log(`> Current model: ${colors.magenta(modelDesc)} `)
-  console.log(
-    `> Let's start chatting, communicate in natural language (enter 'exit' or 'q' to exit program)`,
-  )
+  console.log(`> Let's start chatting, communicate in natural language`)
+  console.log(`  (enter 'exit' or 'q' to exit program, 'model' or 'm' to switch model)`)
   console.log() // empty line
 }

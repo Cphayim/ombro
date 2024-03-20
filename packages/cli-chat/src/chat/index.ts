@@ -1,25 +1,14 @@
-import { EXIT_COMMANDS } from '../constants.js'
-import { botAnswer, botOutput, getModelDescription, initBot } from './bot.js'
+import { botAnswer, initBot } from './bot.js'
+import { getCurrentModel } from './model.js'
 import { askQuestion, chatTip } from './user.js'
 
 export async function chat() {
   initBot()
-  chatTip(getModelDescription())
+  chatTip(getCurrentModel().name)
 
   // eslint-disable-next-line no-constant-condition
   while (true) {
-    const question = await askQuestion()
-    checkExit(question)
+    await askQuestion()
     await botAnswer()
-  }
-}
-
-/**
- * 检查退出状态
- */
-function checkExit(input: string) {
-  if (EXIT_COMMANDS.includes(input.toLocaleLowerCase())) {
-    botOutput('Goodbye!', { nowrap: true })
-    process.exit()
   }
 }

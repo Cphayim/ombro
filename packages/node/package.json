@@ -39,7 +39,7 @@
     "@babel/plugin-proposal-decorators": "^7.24.0",
     "@babel/plugin-proposal-pipeline-operator": "^7.23.3",
     "@babel/preset-env": "^7.24.0",
-    "execa": "^5.1.1",
+    "execa": "^8.0.1",
     "find-up": "^4.1.0",
     "minimist": "^1.2.8"
   }

@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+
 import fs from 'fs-extra'
 import inquirer from 'inquirer'
 
@@ -19,18 +20,19 @@ export async function createPresetPackage() {
   const { folderName, packageName, description } = await inquirer.prompt<Answers>([
     {
       name: 'folderName',
-      message: 'What is preset folder name?',
+      message: 'What is package folder name?',
       validate: (input: string) => !!input || 'Folder name is required',
     },
     {
       name: 'packageName',
-      message: 'What is preset package name?',
+      message: 'What is package name?',
       default: ({ folderName }: Answers) => `@ombro/${folderName}`,
       validate: (input: string) => !!input || 'Package name is required',
+      filter: (input: string) => (input.includes('/') ? input : `@ombro/${input}`),
     },
     {
       name: 'description',
-      message: 'What is preset package description?',
+      message: 'What is package description?',
     },
   ])
 

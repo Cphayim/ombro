@@ -1,0 +1,58 @@
+{
+  "name": "@ombro/h5plus",
+  "version": "1.0.0",
+  "description": "H5Plus command line tool and API extensions.",
+  "author": "Cphayim <i@cphayim.me>",
+  "homepage": "https://github.com/Cphayim/ombro#readme",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "dist",
+    "tpl"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "bin": {
+    "ombro-h5plus": "dist/cli.mjs",
+    "oh5plus": "dist/cli.mjs"
+  },
+  "type": "module",
+  "main": "dist/lib.cjs",
+  "module": "dist/lib.mjs",
+  "types": "dist/lib.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/lib.mjs",
+      "require": "./dist/lib.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cphayim/ombro.git",
+    "directory": "packages/h5plus"
+  },
+  "scripts": {
+    "build:cli": "vite build -c vite.cli.config.ts",
+    "build:lib": "vite build -c vite.lib.config.ts",
+    "build": " pnpm run clean && pnpm run build:lib && pnpm run build:cli",
+    "clean": "rimraf dist coverage *.tsbuildinfo",
+    "prepublish": "pnpm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/Cphayim/ombro/issues"
+  },
+  "dependencies": {
+    "compressing": "^1.10.0",
+    "consola": "^3.2.3",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.16",
+    "jsonc": "^2.0.0",
+    "pkg-dir": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/inquirer": "^9.0.7"
+  }
+}

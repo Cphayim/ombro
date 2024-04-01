@@ -1,6 +1,6 @@
 {
   "name": "@ombro/eslint-config-vue2",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Shared eslint config for Vue2",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",

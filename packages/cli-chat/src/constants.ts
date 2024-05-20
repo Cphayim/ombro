@@ -50,6 +50,10 @@ export const MODELS = {
   },
   GPT_4: {
     name: 'GPT-4',
-    value: 'gpt-4-1106-preview',
+    value: 'gpt-4-turbo',
+  },
+  GPT_4O: {
+    name: 'GPT-4o',
+    value: 'gpt-4o',
   },
 } as const

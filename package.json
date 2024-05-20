@@ -7,7 +7,7 @@
   "engines": {
     "node": ">=v16.20.2"
   },
-  "packageManager": "pnpm@8.15.4",
+  "packageManager": "pnpm@9.0.4",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",

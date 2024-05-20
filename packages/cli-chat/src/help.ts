@@ -10,6 +10,9 @@ OChat is a command line interface chat tool. With the help of OpenAI services, i
 > start chatting with GPT-4:
   ${colors.bold('ochat --gpt-4')}
 
+  > start chatting with GPT-4o:
+  ${colors.bold('ochat --gpt-4o')}
+
 > read configuration:
   ${colors.bold('ochat config')}
 

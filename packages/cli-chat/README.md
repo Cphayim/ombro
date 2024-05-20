@@ -8,7 +8,7 @@ OChat is a command line interface chat tool. With the help of OpenAI services, i
 
 ![guide](https://cdn.jsdelivr.net/gh/cphayim/oss@main/images/2024/03/20/010945Yxy2YJ.gif)
 
-> GPT-4 is already supported and can be initialized using the `--gpt-4` parameter.
+> GPT-4 is already supported and can be initialized using the `--gpt-4` or `--gpt-4o` parameter.
 
 ## Install
 
@@ -39,6 +39,10 @@ $ ochat
 # Using the GPT-4 model.
 # Please make sure to monitor your API consumption while using the service.
 $ ochat --gpt-4
+
+# Using the GPT-4o model.
+# Please make sure to monitor your API consumption while using the service.
+$ ochat --gpt-4o
 ```
 
 ## CHANGELOG

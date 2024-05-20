@@ -1,5 +1,11 @@
 # @ombro/cli-chat
 
+## 1.2.0
+
+### Minor Changes
+
+- Support GPT-4o
+
 ## 1.1.0
 
 ### Minor Changes

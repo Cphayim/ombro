@@ -8,7 +8,7 @@ OChat 是一个命令行界面聊天工具。通过 OpenAI 服务的帮助，它
 
 ![guide](https://cdn.jsdelivr.net/gh/cphayim/oss@main/images/2024/03/20/010945Yxy2YJ.gif)
 
-> 已经支持 GPT-4，使用 `--gpt-4` 参数启动
+> 已经支持 GPT-4，使用 `--gpt-4` 或 `--gpt-4o` 参数启动
 
 ## 安装
 
@@ -39,6 +39,10 @@ $ ochat
 # 使用 GPT-4 模型
 # 请留意在使用服务时您的 API 消费情况
 $ ochat --gpt-4
+
+# 使用 GPT-4o 模型
+# 请留意在使用服务时您的 API 消费情况
+$ ochat --gpt-4o
 ```
 
 ## CHANGELOG

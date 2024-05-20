@@ -1,6 +1,6 @@
 {
   "name": "@ombro/cli-chat",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "OChat is a CLI chat tool. With the help of OpenAI services, it can answer any question you have.",
   "author": "Cphayim <i@cphayim.me>",
   "homepage": "https://github.com/Cphayim/ombro#readme",

@@ -1,5 +1,12 @@
 # @ombro/tsconfig
 
+## 2.0.1
+
+### Patch Changes
+
+- The setting `removeComments` is not enabled by default
+- Which simplifies the hierarchy
+
 ## 2.0.0
 
 ### Major Changes

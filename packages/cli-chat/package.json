@@ -38,8 +38,8 @@
     "@ombro/is-main": "workspace:^",
     "@ombro/logger": "workspace:^",
     "dotenv": "^16.4.5",
-    "inquirer": "^9.2.16",
-    "openai": "^4.47.1"
+    "inquirer": "^9.3.7",
+    "openai": "^4.68.4"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.7"

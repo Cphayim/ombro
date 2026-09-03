@@ -26,11 +26,11 @@
     "prettier": "^2.0.0 || ^3.0.0"
   },
   "dependencies": {
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-vue": "^9.23.0"
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-vue": "^9.33.0"
   },
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "prettier": "^3.2.5"
+    "eslint": "^8.57.1",
+    "prettier": "^3.9.6"
   }
 }
